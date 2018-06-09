@@ -42,14 +42,8 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        createTableForWaterMeterSave(db);
-        createTableForWaterMeterRecord(db);
-        createTableForWaterCompanySearch(db);
         createTableForHeatCompanySearch(db);
         createTableForHierarchySearch(db);
-        createTableForHydrantCompanySearch(db);
-        createTableForBluetoothRecord(db);
-        createTableForProductSearch(db);
     }
 
     /**
@@ -57,14 +51,8 @@ public class DbHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + Table.WaterMeterSaveTable.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + Table.WaterMeterRecordTable.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + Table.WaterCompanySearchTable.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + Table.HeatCompanySearchTable.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + Table.HierarchySearchTable.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + Table.HydrantCompanySearchTable.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + Table.BluetoothRecordTable.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + Table.ProductSearchTable.TABLE_NAME);
         onCreate(db);
     }
 
@@ -95,102 +83,6 @@ public class DbHelper extends SQLiteOpenHelper {
             upgrade.update(db);
             updateDB(db, oldVersion, newVersion);
         }
-    }
-
-    /**
-     * 建表——保存机械水表抄表记录的表
-     *
-     * @author LiYuliang
-     * @date 2018/4/9 14:33
-     */
-    private void createTableForWaterMeterRecord(SQLiteDatabase db) {
-        String table = "CREATE TABLE IF NOT EXISTS " +
-                Table.WaterMeterRecordTable.TABLE_NAME +
-                " (" +
-                Table.WaterMeterRecordTable.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Table.WaterMeterRecordTable.AREA_CODE + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.AREA_NAME + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.USER_CODE + "  VARCHAR(100)," +
-                Table.WaterMeterRecordTable.USER_NAME + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.USER_PHONE + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.USER_ADDRESS + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.METER_CODE + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.METER_TYPE + " INTEGER," +
-                Table.WaterMeterRecordTable.METER_LAST_DATA + " FLOAT," +
-                Table.WaterMeterRecordTable.LAST_CONSUMPTION + " FLOAT," +
-                Table.WaterMeterRecordTable.USER_NO + " INTEGER," +
-                Table.WaterMeterRecordTable.COMMIT_STATUS + " INTEGER," +
-
-                Table.WaterMeterRecordTable.METER_THIS_DATA + " FLOAT," +
-                Table.WaterMeterRecordTable.LATITUDE + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.LONGITUDE + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.ALTITUDE + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.PHOTO_PATHS + " TEXT," +
-                Table.WaterMeterRecordTable.METER_READER + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.READ_TIME + " VARCHAR(100)," +
-                Table.WaterMeterRecordTable.METER_STATUS + " INTEGER," +
-                Table.WaterMeterRecordTable.READ_STATUS + " INTEGER" +
-                ")";
-        db.execSQL(table);
-    }
-
-    /**
-     * 建表——保存用户离线操作蓝牙的记录
-     *
-     * @author LiYuliang
-     * @date 2018/4/9 14:33
-     */
-    private void createTableForBluetoothRecord(SQLiteDatabase db) {
-        String table = "CREATE TABLE IF NOT EXISTS " +
-                Table.BluetoothRecordTable.TABLE_NAME +
-                " (" +
-                Table.BluetoothRecordTable.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Table.BluetoothRecordTable.LOGIN_ID + " INTEGER," +
-                Table.BluetoothRecordTable.LAT + " VARCHAR(20), " +
-                Table.BluetoothRecordTable.LNG + " VARCHAR(20), " +
-                Table.BluetoothRecordTable.TX + " VARCHAR(200), " +
-                Table.BluetoothRecordTable.MODE + " VARCHAR(10), " +
-                Table.BluetoothRecordTable.TIME + " VARCHAR(50), " +
-                Table.BluetoothRecordTable.CREATE_TIME + " VARCHAR(50), " +
-                Table.BluetoothRecordTable.BLUETOOTH_MAC + " VARCHAR(50), " +
-                Table.BluetoothRecordTable.PRODUCT_TYPE + " VARCHAR(50), " +
-                Table.BluetoothRecordTable.BLUETOOTH_DESC + " VARCHAR(100)" +
-                ")";
-        db.execSQL(table);
-    }
-
-    /**
-     * 建表——保存水司管理员收藏的采集器号和表号（水表操作页面）
-     *
-     * @author LiYuliang
-     * @date 2018/4/9 14:33
-     */
-    private void createTableForWaterMeterSave(SQLiteDatabase db) {
-        String table = "CREATE TABLE IF NOT EXISTS " +
-                Table.WaterMeterSaveTable.TABLE_NAME +
-                " (" +
-                Table.WaterMeterSaveTable.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Table.WaterMeterSaveTable.IMEI + " VARCHAR(20), " +
-                Table.WaterMeterSaveTable.METER_ID + " VARCHAR(20)" +
-                ")";
-        db.execSQL(table);
-    }
-
-    /**
-     * 建表——保存水表管理员选择水司的表（按照平台区分）
-     *
-     * @author LiYuliang
-     * @date 2018/4/9 15:12
-     */
-    private void createTableForWaterCompanySearch(SQLiteDatabase db) {
-        String table = "CREATE TABLE IF NOT EXISTS " +
-                Table.WaterCompanySearchTable.TABLE_NAME +
-                " (" +
-                Table.WaterCompanySearchTable.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Table.WaterCompanySearchTable.NAME + " VARCHAR(50), " +
-                Table.WaterCompanySearchTable.HTTP_PORT + " VARCHAR(5)" +
-                ")";
-        db.execSQL(table);
     }
 
     /**
@@ -225,40 +117,6 @@ public class DbHelper extends SQLiteOpenHelper {
                 Table.HierarchySearchTable.NAME + " VARCHAR(50), " +
                 Table.HierarchySearchTable.FIELD_NAME + " VARCHAR(50), " +
                 Table.HierarchySearchTable.FIELD_VALUE + " VARCHAR(5)" +
-                ")";
-        db.execSQL(table);
-    }
-
-    /**
-     * 建表保存消火栓超级管理员选择公司记录的表
-     *
-     * @author LiYuliang
-     * @date 2018/4/9 15:25
-     */
-    private void createTableForHydrantCompanySearch(SQLiteDatabase db) {
-        String table = "CREATE TABLE IF NOT EXISTS " +
-                Table.HydrantCompanySearchTable.TABLE_NAME +
-                " (" +
-                Table.HydrantCompanySearchTable.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Table.HydrantCompanySearchTable.NAME + " VARCHAR(50)," +
-                Table.HydrantCompanySearchTable.HTTP_PORT + " VARCHAR(5)" +
-                ")";
-        db.execSQL(table);
-    }
-
-    /**
-     * 建表保存用户搜索产品与服务记录的表
-     * Created at 2018/4/25 0025 13:46
-     *
-     * @author LiYuliang
-     * @version 1.0
-     */
-    private void createTableForProductSearch(SQLiteDatabase db) {
-        String table = "CREATE TABLE IF NOT EXISTS " +
-                Table.ProductSearchTable.TABLE_NAME +
-                " (" +
-                Table.ProductSearchTable.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Table.ProductSearchTable.NAME + " VARCHAR(50)" +
                 ")";
         db.execSQL(table);
     }

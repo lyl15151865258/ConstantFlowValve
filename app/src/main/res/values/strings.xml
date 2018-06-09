@@ -1147,7 +1147,7 @@
 
     <string name="AccountSettings">账号设置</string>
     <string name="MainAccount">主账号设置</string>
-    <string name="SubAccount">子账号设置</string>
+    <string name="ConstantFlowValveAccount">恒流阀账号</string>
     <string name="BindSocialAccount">绑定社交账号</string>
     <string name="PersonalizedSettings">个性化设置</string>
     <string name="ShowLogoPage">显示引导页面</string>

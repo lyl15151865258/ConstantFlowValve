@@ -97,7 +97,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 沉浸模式View
      */
     protected void setStatusBar() {
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorBluePrimary));
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorOrangePrimary));
     }
 
     @Override

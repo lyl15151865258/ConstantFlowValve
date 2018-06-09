@@ -5,7 +5,7 @@ package cn.njmeter.constantflowvalve.constant;
  * 本软件信息类
  *
  * @author LiYuliang
- * @version 2017/11/20
+ * @version 2018/06/09
  */
 
 public class ApkInfo {

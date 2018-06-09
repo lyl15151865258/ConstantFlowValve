@@ -191,11 +191,11 @@
         <item name="android:button">@drawable/my_checkbox</item>
     </style>
 
-    <!--blueTheme-->
-    <style name="BlueTheme" parent="AppTheme">
-        <item name="colorPrimary">@color/colorBluePrimary</item>
-        <item name="colorPrimaryDark">@color/colorBluePrimary</item>
-        <item name="colorAccent">@color/colorBluePrimaryDark</item>
+    <!--OrangeTheme-->
+    <style name="OrangeTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/colorOrangePrimary</item>
+        <item name="colorPrimaryDark">@color/colorOrangePrimary</item>
+        <item name="colorAccent">@color/colorOrangePrimaryDark</item>
         <item name="menuBackground">@drawable/blue_background</item>
     </style>
 
@@ -204,7 +204,7 @@
         <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
     </style>
 
-    <declare-styleable name="MyProgressBar">
+    <declare-styleable name="DownloadProgressBar">
         <attr name="text" format="string" />
 
         <attr name="textSize" format="dimension" />
@@ -353,14 +353,4 @@
         <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
     </style>
 
-
-    <declare-styleable name="GifView">
-        <attr name="gif" format="reference" />
-        <attr name="paused" format="boolean" />
-    </declare-styleable>
-    <declare-styleable name="CustomTheme">
-        <attr name="gifViewStyle" format="reference" />
-    </declare-styleable>
-
-    <style name="Widget_GifView"></style>
 </resources>

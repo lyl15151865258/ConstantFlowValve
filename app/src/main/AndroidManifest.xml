@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/BlueTheme">
+        android:theme="@style/OrangeTheme">
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -30,7 +30,7 @@
         </provider>
 
         <activity
-            android:name=".loginregister.activity.SplashActivity"
+            android:name=".activity.SplashActivity"
             android:launchMode="singleTask"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -42,19 +42,19 @@
 
         <!-- 登录注册 -->
         <activity
-            android:name=".loginregister.activity.LoginRegisterActivity"
+            android:name=".activity.LoginRegisterActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <!-- 找回密码 -->
         <activity
-            android:name=".loginregister.activity.RetrievePasswordActivity"
+            android:name=".activity.RetrievePasswordActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <!-- 更改密码 -->
         <activity
-            android:name=".loginregister.activity.ChangePasswordActivity"
+            android:name=".activity.ChangePasswordActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
@@ -64,21 +64,75 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
+        <!-- 选择层级 -->
+        <activity
+            android:name=".activity.ChooseHierarchyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
         <!-- 联系我们 -->
         <activity
-            android:name=".aboutapp.activity.ContactUsActivity"
+            android:name=".activity.ContactUsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <!-- 通用网页 -->
         <activity
-            android:name=".aboutapp.activity.HtmlActivity"
+            android:name=".activity.HtmlActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <!-- 版本信息 -->
         <activity
-            android:name=".aboutapp.activity.VersionsActivity"
+            android:name=".activity.VersionsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 选择公司 -->
+        <activity
+            android:name=".activity.ChooseCompanyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 图片裁剪 -->
+        <activity
+            android:name=".activity.CropActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 服务器信息 -->
+        <activity
+            android:name=".activity.ServerConfigurationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 设置公司 -->
+        <activity
+            android:name=".activity.SetCompanyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 设置主账号 -->
+        <activity
+            android:name=".activity.SetMainAccountActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 设置昵称 -->
+        <activity
+            android:name=".activity.SetNickNameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 设置子账号 -->
+        <activity
+            android:name=".activity.SetSubAccountActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 社交账号 -->
+        <activity
+            android:name=".activity.SocialAccountsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 

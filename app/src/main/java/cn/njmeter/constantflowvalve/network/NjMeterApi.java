@@ -3,9 +3,12 @@ package cn.njmeter.constantflowvalve.network;
 import java.util.List;
 import java.util.Map;
 
-import cn.njmeter.constantflowvalve.aboutapp.bean.VersionLog;
+import cn.njmeter.constantflowvalve.bean.HeatMeterLastDataResult;
+import cn.njmeter.constantflowvalve.bean.VersionLog;
 import cn.njmeter.constantflowvalve.bean.NormalResult;
-import cn.njmeter.constantflowvalve.loginregister.bean.ClientUser;
+import cn.njmeter.constantflowvalve.bean.ClientUser;
+import cn.njmeter.constantflowvalve.bean.WaterCompanyHierarchy;
+import cn.njmeter.constantflowvalve.bean.WaterMeterLoginResult;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
@@ -169,5 +172,48 @@ public interface NjMeterApi {
     @FormUrlEncoded
     @POST("VersionController/downloadNewVersion.do")
     Call<ResponseBody> downloadFile(@FieldMap Map<String, String> params);
+
+
+    /******************************************************************  智能恒流阀相关接口  ******************************************************************
+
+     /**
+     * 消火栓平台登录
+     *
+     * @param params 参数
+     * @return 返回值
+     */
+    @FormUrlEncoded
+    @POST("android/androidLogin.do")
+    Observable<WaterMeterLoginResult> loginWaterMeter(@FieldMap Map<String, String> params);
+
+    /**
+     * 查询层级关系
+     *
+     * @param params 参数
+     * @return 返回值
+     */
+    @FormUrlEncoded
+    @POST("android/findLvInfo.do")
+    Observable<WaterCompanyHierarchy> searchAllHierarchy(@FieldMap Map<String, String> params);
+
+    /**
+     * 查询已抄到数据的表具信息
+     *
+     * @param params 参数
+     * @return 返回值
+     */
+    @FormUrlEncoded
+    @POST("android/findNewLastReportData.do")
+    Observable<HeatMeterLastDataResult> searchHeatMeterLastReportYiChao(@FieldMap Map<String, String> params);
+
+    /**
+     * 查询未抄到数据的表具信息
+     *
+     * @param params 参数
+     * @return 返回值
+     */
+    @FormUrlEncoded
+    @POST("android/findNewLastReportDataWeichaodao.do")
+    Observable<HeatMeterLastDataResult> searchHeatMeterLastReportWeiChao(@FieldMap Map<String, String> params);
 
 }

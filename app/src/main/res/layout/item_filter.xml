@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_5">
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="1"
+        android:maxLines="1"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_content_filtering"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="选择比较项"
+        android:maxLines="1"
+        android:textSize="@dimen/sp_16" />
+</LinearLayout>

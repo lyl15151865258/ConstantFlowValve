@@ -344,9 +344,9 @@
     <color name="permissionColorGreen">#41c236</color>
 
     <!--blue-->
-    <color name="colorBluePrimary">#00A0E9</color>
-    <color name="colorBluePrimaryDark">#1976D2</color>
-    <color name="colorBluePrimaryCenter">#062748</color>
+    <color name="colorOrangePrimary">#E83828</color>
+    <color name="colorOrangePrimaryDark">#E83828</color>
+    <color name="colorOrangePrimaryCenter">#E83828</color>
 
     <color name="bg_popupwindow">#30000000</color>
 

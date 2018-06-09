@@ -9,7 +9,7 @@ import android.text.TextUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.njmeter.constantflowvalve.loginregister.bean.ClientUser;
+import cn.njmeter.constantflowvalve.bean.ClientUser;
 import cn.njmeter.constantflowvalve.sqlite.DbHelper;
 import cn.njmeter.constantflowvalve.utils.CrashHandler;
 import cn.njmeter.constantflowvalve.utils.GsonUtils;

@@ -114,14 +114,14 @@ public class MyProgressBar extends View implements Runnable {
     }
 
     private void initAttrs(AttributeSet attrs) {
-        TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.MyProgressBar);
+        TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.DownloadProgressBar);
         try {
-            title = ta.getString(R.styleable.MyProgressBar_text);
-            textSize = (int) ta.getDimension(R.styleable.MyProgressBar_textSize, 12);
-            loadingColor = ta.getColor(R.styleable.MyProgressBar_loadingColor, Color.parseColor("#40c4ff"));
-            stopColor = ta.getColor(R.styleable.MyProgressBar_stopColor, Color.parseColor("#ff9800"));
-            radius = (int) ta.getDimension(R.styleable.MyProgressBar_radius, 0);
-            borderWidth = (int) ta.getDimension(R.styleable.MyProgressBar_borderWidth, 1);
+            title = ta.getString(R.styleable.DownloadProgressBar_text);
+            textSize = (int) ta.getDimension(R.styleable.DownloadProgressBar_textSize, 12);
+            loadingColor = ta.getColor(R.styleable.DownloadProgressBar_loadingColor, Color.parseColor("#40c4ff"));
+            stopColor = ta.getColor(R.styleable.DownloadProgressBar_stopColor, Color.parseColor("#ff9800"));
+            radius = (int) ta.getDimension(R.styleable.DownloadProgressBar_radius, 0);
+            borderWidth = (int) ta.getDimension(R.styleable.DownloadProgressBar_borderWidth, 1);
         } finally {
             ta.recycle();
         }

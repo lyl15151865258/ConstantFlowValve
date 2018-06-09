@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_5"
+    android:layout_marginRight="@dimen/dp_5"
+    android:background="@drawable/background_dialog_normal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_20"
+            android:text="@string/CustomFiltering"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:text="@string/ComparisonItems"
+            android:textSize="@dimen/sp_18" />
+
+        <cn.njmeter.constantflowvalve.widget.flowtaglayout.FlowTagLayout
+            android:id="@+id/flt_content_filtering"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:text="@string/ComparisonOperators"
+            android:textSize="@dimen/sp_18" />
+
+        <cn.njmeter.constantflowvalve.widget.flowtaglayout.FlowTagLayout
+            android:id="@+id/flt_comparison_operators"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:text="@string/ComparisonValues"
+            android:textSize="@dimen/sp_18" />
+
+        <cn.njmeter.constantflowvalve.widget.flowtaglayout.FlowTagLayout
+            android:id="@+id/flt_value_filtering"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_filterValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:background="@drawable/border_white"
+            android:gravity="center"
+            android:hint="@string/EnterComparisonValues"
+            android:inputType="textMultiLine"
+            android:maxLength="20"
+            android:maxLines="2"
+            android:padding="@dimen/dp_5" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:background="@color/gray_5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_button_dialog_selector_left"
+            android:text="@string/dialog_save"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="@dimen/dp_2"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/gray_5" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_button_dialog_selector_middle"
+            android:text="@string/dialog_clear"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="@dimen/dp_2"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/gray_5" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_button_dialog_selector_right"
+            android:text="@string/dialog_cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
