@@ -1,553 +1,37 @@
 <resources>
     <string name="name_company">迈拓仪表股份有限公司</string>
-    <string name="login_now">现在登陆</string>
-    <string name="login_later">以后登陆</string>
-    <string name="welcome_to_njmeter">欢迎使用迈拓仪表客户端</string>
-    <string name="welcome_introduction">智慧水务的未来：“智造”与“慧用”，智慧创造美好生活</string>
-    <string name="function">物联网</string>
-    <string name="function_introduction">大数据、工业4.0、互联网+、智能仪表、物联网，科技成就未来</string>
-    <string name="tips_and_tricks">多功能</string>
-    <string name="tips_introduction">遥控开关阀、用水状态实时查看、用水统计与查询，十八般武器样样都有</string>
-    <string name="scan_qr_code">将取景框对准二维码\n即可自动扫描</string>
-    <string name="back">返回</string>
-    <string name="flashlight">闪光灯</string>
-    <string name="operate">操作</string>
-    <string name="operate_hydrant">仪表操作</string>
-    <string name="operate_meter">仪表操作</string>
-    <string name="statistics">统计</string>
-    <string name="information_use_water">用水详情</string>
-    <string name="time">时间：</string>
-    <string name="method">方式：</string>
-    <string name="id_meter">表号：</string>
-    <string name="consumption">用量：</string>
-    <string name="dialog_btn_exit">退&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;出</string>
-    <string name="dialog_btn_reLogin">重新登录</string>
-    <string name="dialog_input_screenshot">截&#160;&#160;&#160;&#160;屏</string>
-    <string name="dialog_input_clear">清&#160;&#160;&#160;&#160;空</string>
     <string name="dialog_ok">确&#160;&#160;&#160;&#160;定</string>
     <string name="dialog_input_continue">继&#160;&#160;&#160;&#160;续</string>
-    <string name="dialog_loading">数据加载中……</string>
-    <string name="id_app2">用户ID：</string>
-    <string name="id_hydrant2">消火栓ID：</string>
-    <string name="open_lock">开阀门锁</string>
-    <string name="close_lock">关阀门锁</string>
-    <string name="choose_start_time">请选择起始日期:</string>
-    <string name="choose_end_time">请选择结束日期:</string>
-    <string name="search2">查    询</string>
-    <string name="time_use_water">用水时间</string>
-    <string name="range_time">(开始~结束)</string>
-    <string name="id_hydrant">消火栓ID</string>
-    <string name="id_user">用户ID</string>
-    <string name="method_open_lock">开阀\n方式</string>
-    <string name="consumption_water">用水量</string>
-    <string name="total_consumption_water">总用水量</string>
-    <string name="unit_consumption_water">(立方米)</string>
-    <string name="show_list">列表显示</string>
-    <string name="show_chart">图表显示</string>
-    <string name="last_twenty_times">最近20次用水量趋势图</string>
-    <string name="total_times">历史总用水次数:</string>
-    <string name="total_consumption">历史总用水量:</string>
-    <string name="max_consumption">历史最高用水量:</string>
-    <string name="min_consumption">历史最低用水量:</string>
-    <string name="average_consumption">历史平均用水量:</string>
-    <string name="example_consumption">000.000m³</string>
-    <string name="example_times">0次</string>
-    <string name="start_time">开始时间</string>
-    <string name="end_time">结束时间</string>
     <string name="contact">联系电话:+86 025&#8211;86981981 86981982\n联系地址:江苏省南京市滨江经济开发区喜燕路5号\n版权所有 © 迈拓仪表股份有限公司 2018</string>
-    <string name="located">定位</string>
-    <string name="satellite">卫星</string>
-    <string name="compass">指南</string>
-    <string name="unknown">未知</string>
-    <string name="zero">0</string>
-    <string name="dialog_input_title2">请输入相关补充信息</string>
-    <string name="information_meet_the_requirements">共查询到n条符合要求的信息</string>
-    <string name="choose_one">(请点击选择一条)</string>
-    <string name="photos_num">%1$d张</string>
-    <string name="current_of_all">%1$d/%2$d</string>
-    <string name="msg_maxi_capacity">已达到照片选择上限</string>
-    <string name="commit">确定</string>
-    <string name="time_commit2">提交时间</string>
-    <string name="information_alarm_hydrant">报警信息</string>
-    <string name="details_alarm_hydrant">报警信息详情</string>
-    <string name="commit_num">确定(%1$d/%2$d)</string>
-    <string name="platform_hydrant">智能消火栓</string>
-    <string name="platform_water_meter">超声水表</string>
-    <string name="platform_bluetooth_device">蓝牙工具</string>
-    <string name="bluetooth_water_meter">超声波水表</string>
-    <string name="bluetooth_heat_meter">超声波热量表</string>
-    <string name="bluetooth_hydrant">智能消火栓</string>
-    <string name="bluetooth_valve">智能控制阀</string>
-    <string name="bluetooth_collector">无线采集终端</string>
-    <string name="bluetooth_lora">无线LoRa设定</string>
-    <string name="platform_read_waterMeter">机械表抄表</string>
-    <string name="pages">1024张</string>
-    <string name="time2">时间</string>
     <string name="setting">设置</string>
     <string name="item">项目</string>
-    <string name="current_data">当前数据</string>
-    <string name="id_current_user">当前用户ID</string>
-    <string name="dash">—</string>
-    <string name="time_open_lock">开锁时间</string>
-    <string name="device_open_lock">开锁设备</string>
-    <string name="consumption_current_water">当前用水量</string>
-    <string name="state_current_use">当前使用状态</string>
-    <string name="not_close_tightly">未关紧阀</string>
-    <string name="leakage_without_user">无用户漏水</string>
-    <string name="search_information">信息查询</string>
-    <string name="show_list_chart">图表展示</string>
-    <string name="address_hydrant">消火栓地点</string>
-    <string name="imei_hydrant">消火栓IMEI</string>
-    <string name="imei2">IMEI</string>
-    <string name="address_hierarchy">层级地址</string>
-    <string name="address_install">安装地址</string>
-    <string name="create_time">创建时间</string>
-    <string name="map">地图</string>
-    <string name="map_navigation">地图导航</string>
-    <string name="write_feedback">请填写反馈信息</string>
-    <string name="tips_search_hydrant_warning">查询说明</string>
     <string name="sizeRange_search_waterMeter">水表查询口径设置</string>
-    <string name="timeRange_search_waterMeter">水表查询时间设置</string>
-    <string name="rowsPerPage_search_waterMeter">每页显示条数设置</string>
-    <string name="tips_search_hydrant_warning2">一、点击“查询”按钮将查询所有消火栓最后一次上传的报警信息，并与所选的报警项进行匹配，至少有一项相符的消火栓将被筛选并显示；\n二、点击查询结果的每一个消火栓标签可以显示该消火栓本次报警的详细信息；\n三、选择自动查询将每隔一定时间查询一次所勾选的报警项并刷新数据，自动查询消耗流量较多，建议在WiFi下使用；\n四、自动查询时间间隔可在下方设置，设置后需关闭再打开自动查询功能或重启应用生效。</string>
-    <string name="hydrant_id_optional">消火栓ID(选填)：</string>
-    <string name="tips_feedback">请如实填写使用过程中遇到的问题，多次提交无关信息可能导致封号</string>
-    <string name="modification_alarm_enabled">报警使能修改</string>
-    <string name="items_hydrant_alarm">报警项目</string>
-    <string name="enabled">使能</string>
-    <string name="state_water_pressure">水压状态</string>
-    <string name="water_pressure_mutation">水压突变</string>
-    <string name="state_slant">垂直状态</string>
-    <string name="state_slant_hydrant">消火栓倾斜</string>
-    <string name="state_vibration">震动状态</string>
-    <string name="state_cover">盖子状态</string>
-    <string name="split_cover">盖子被拆</string>
-    <string name="state_battery">电池状态</string>
-    <string name="split_battery">电池被拆</string>
-    <string name="state_temperature">温度状态</string>
-    <string name="low_temperature_water">水温低</string>
-    <string name="state_lock_status">阀门锁状态</string>
-    <string name="state_lock_opened">阀门锁开</string>
-    <string name="close_valve">阀门关闭</string>
-    <string name="close_tightly_valve">阀门关紧</string>
-    <string name="not_close_tightly_valve">阀门未关紧</string>
-    <string name="temperature_measurement_short_circuit">测温短路</string>
-    <string name="temperature_measurement_open_circuit">测温断路</string>
-    <string name="water_exist">是否有水</string>
-    <string name="hydrant_no_water_exist">消火栓无水</string>
-    <string name="gps_position">GPS定位</string>
-    <string name="rate_capacity">量程范围</string>
-    <string name="over_rate_capacity">超量程范围</string>
-    <string name="voltage_battery">电池电压</string>
-    <string name="state_voltage_battery">电池电压状态</string>
-    <string name="low_voltage_battery">电池电压低</string>
-    <string name="state_water_leakage">漏水状态</string>
-    <string name="reverse_water">水流反向</string>
-    <string name="reconnect_gprs">GPRS重连</string>
-    <string name="warning_modify">☆非专业人员请勿修改</string>
-    <string name="use_last_data">使用上次设置的值</string>
-    <string name="extra_information_hydrant">如果定位信息不准确或有其他相关信息需要补充可在此填写并点击“确定”按钮</string>
-    <string name="modify_alarm_data">报警参数值修改</string>
-    <string name="threshold_pressure_mutations">压力突变阈值:</string>
-    <string name="threshold_pressure_mutations2">压力突变阈值</string>
-    <string name="threshold_lower_pressure_limit">压力下限阈值:</string>
-    <string name="threshold_lower_pressure_limit2">压力下限阈值</string>
-    <string name="rate_leakage_flow">漏水流速:</string>
-    <string name="rate_leakage_flow2">漏水流速</string>
-    <string name="cubic_metres_per_hour">m³/h</string>
-    <string name="timeout_leakage_flow">漏水超时:</string>
-    <string name="timeout_leakage_flow2">漏水超时</string>
-    <string name="lower_temperature_limit">温度下限:</string>
-    <string name="lower_temperature_limit2">温度下限</string>
-    <string name="variation_vibration">震动变化量:</string>
-    <string name="variation_vibration2">震动变化量</string>
-    <string name="zero_zero_zero_zero">0000</string>
     <string name="zero_zero_zero_zero_zero_zero_zero_zero">00000000</string>
-    <string name="unit_pressure">bar</string>
-    <string name="examplePressureBar">%1$sbar</string>
-    <string name="examplePressureMpa">%1$sMpa</string>
     <string name="example_temperature">%1$s℃</string>
-    <string name="example_voltage">%1$sV</string>
-    <string name="example_frequency">%1$sHz</string>
-    <string name="example_ElectricCurrent">%1$sA</string>
-    <string name="example_power_kW">%1$skW</string>
-    <string name="unit_time">分钟</string>
-    <string name="unit_temperature">℃</string>
     <string name="reminder_metter">江苏迈拓提示您</string>
-    <string name="select_point_type">请选择测点类型</string>
-    <string name="input_id_hydrant">输入消火栓ID号</string>
-    <string name="scan_hydrant_successfully">消火栓识别成功</string>
-    <string name="incorrect_barcode">不是正确的智能消火栓二维码</string>
-    <string name="reminder_open_gps">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;当前GPS关闭，必须打开GPS才能提交定位信息，请到设置页面打开GPS。</string>
-    <string name="warning_read_water_meter">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;根据当前抄表值计算出本期用水量为负数，请核实，如果确定数据无误请将水表状态改为异常。</string>
-    <string name="warning_delete_database">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;您将删除本地保存的所有表册信息（包含您的抄表记录），请确保您的抄表数据已经全部提交到服务器，否则将会丢失您的抄表记录，是否继续删除？</string>
     <string name="warning_redownload">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;您已经下载过该版本文件，是否直接安装？</string>
     <string name="warning_delete_history">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;您将删除该条搜索记录，是否继续删除？</string>
     <string name="warning_delete_history_all">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;您将删除所有历史搜索记录，是否继续删除？</string>
-    <string name="warning_delete_photos">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;您将删除本地所有保存的抄表照片，请确保您的抄表数据已经全部提交到服务器，否则您的抄表数据可能无法上传，是否继续删除？</string>
-    <string name="warning_delete_excel">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;您将删除所有导出的抄表记录，请确保您不再使用这些表格，是否继续删除？</string>
-    <string name="reminder_close_bluetooth">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;关闭蓝牙可以节约手机用电，退出本页面时是否关闭蓝牙？</string>
-    <string name="reminder_read_repeat">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;该用户本期已抄表或用水信息已提交，是否重新抄表？</string>
-    <string name="reminder_logout_status">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;您的江苏迈拓账号于%s在其它设备上登陆，如果不是您本人操作，您的密码可能已泄露，请及时修改密码或联系管理员。</string>
-    <string name="read_alarm_data">读取报\n警参数</string>
-    <string name="set_alarm_data">设置报\n警参数</string>
-    <string name="read_alarm_state">读取报\n警状态</string>
-    <string name="read_hydrant_data">读取表\n数据</string>
-    <string name="read_gps">读取GPS\n坐标</string>
-    <string name="refresh_gps">刷新GPS\n坐标</string>
-    <string name="read_current_use_data">读取当前\n使用数据</string>
-    <string name="read_history_use_data">读取历史\n使用记录</string>
-    <string name="read_alarm_enabled">读取报\n警使能</string>
-    <string name="set_alarm_enabled">设置报\n警使能</string>
-    <string name="open_lock_hydrant">开消火栓\n阀门锁</string>
-    <string name="close_lock_hydrant">关消火栓\n阀门锁</string>
-    <string name="name">姓名：</string>
-    <string name="number_ic_card">IC卡号：</string>
-    <string name="number_id">ID号：</string>
-    <string name="number_phone">电话：</string>
-    <string name="choose_all">全选</string>
-    <string name="longitude">经度:</string>
-    <string name="longitude_gps">GPS经度:</string>
-    <string name="latitude">纬度:</string>
-    <string name="latitude_gps">GPS纬度</string>
-    <string name="information_address">地点信息:</string>
-    <string name="no_location_information">当前位置暂无定位信息</string>
-    <string name="extra_information">补充信息</string>
-    <string name="add_photos">添加照片</string>
-    <string name="information_commit">提交信息</string>
-    <string name="record_history">历史提交记录</string>
-    <string name="helpful_hints">友情提示:</string>
-    <string name="feedback_problems">问题反馈:</string>
-    <string name="feedback_apk">软件反馈:</string>
-    <string name="feedback">反 馈</string>
-    <string name="tips_commit_feedback">如遇到消火栓使用问题请点击右侧按钮提交相关信息（请勿提交无关信息)</string>
-    <string name="tips_water_data">*点击下方标题栏可排序*点击子项查看用水详情*</string>
-    <string name="water_station">全部分公司</string>
-    <string name="community">全部小区</string>
-    <string name="building">全部楼栋</string>
-    <string name="unit">全部单元</string>
-    <string name="A">A</string>
-    <string name="B">B</string>
-    <string name="C">C</string>
-    <string name="D">D</string>
-    <string name="E">E</string>
-    <string name="F">F</string>
-    <string name="G">G</string>
-    <string name="H">H</string>
-    <string name="I">I</string>
-    <string name="J">J</string>
-    <string name="K">K</string>
-    <string name="L">L</string>
-    <string name="M">M</string>
-    <string name="N">N</string>
-    <string name="O">O</string>
-    <string name="P">P</string>
-    <string name="this_hydrant_has">该消火栓共有</string>
-    <string name="n">n</string>
-    <string name="record_open_lock">条开锁记录</string>
-    <string name="input_id_record">请输入记录序号(倒序):</string>
-    <string name="serial_number">序号</string>
-    <string name="data">数据</string>
-    <string name="total_number_records">总记录数</string>
-    <string name="current_serial_number_record">当前记录序号</string>
-    <string name="id_user_open_the_lock">开阀门锁用户ID</string>
-    <string name="device_open_the_lock">开阀门锁设备</string>
-    <string name="time_open_the_lock">开阀门锁时间</string>
-    <string name="time_after_use_water">结束用水时间</string>
-    <string name="consumption_this_time">当次用水量</string>
-    <string name="countdown_four_seconds">跳过\n4s</string>
-    <string name="countdown_time">跳过\n%1$ds</string>
-    <string name="take_photo">拍摄照片</string>
-    <string name="time_example">2017&#8211;01&#8211;01 00:00:00</string>
-    <string name="choose_photo">选择图片</string>
-    <string name="all_photos2">所有图片</string>
-    <string name="all_photos">全部图片</string>
-    <string name="alarm">报警:</string>
-    <string name="time_commit3">提交时间:</string>
-    <string name="user_commit">提  交  人:</string>
-    <string name="no_data">暂无数据</string>
-    <string name="no_information2">:暂无信息</string>
-    <string name="alarm_enabled2">:报警使能</string>
-    <string name="alarm_unable2">:报警失能</string>
-    <string name="parameters">参数名</string>
-    <string name="value_current">当前值</string>
-    <string name="value_setting">设定值</string>
-    <string name="unit2">单位</string>
-    <string name="none2">（无）</string>
-    <string name="name_data">数据名称</string>
-    <string name="unit_battery_voltage">V</string>
-    <string name="cubic_metres">m³</string>
-    <string name="value_pressure">压力值</string>
-    <string name="total_flow">累计流量</string>
-    <string name="total_flow_reserve">反向累计流量</string>
-    <string name="flow_rate">瞬时流速</string>
-    <string name="state">状态</string>
-    <string name="normal_state">:状态正常</string>
-    <string name="abnormal_state">:状态异常</string>
-    <string name="polling_interval">查询间隔(s):</string>
     <string name="range_meterSize">口径范围:</string>
     <string name="range_meterSize_DN">%1$s~%2$s</string>
     <string name="to">~</string>
-    <string name="current_page">第ii页/共jj页(kkk条)</string>
-    <string name="go_to">到第</string>
-    <string name="page">页</string>
-    <string name="doorPlate">门牌号</string>
-    <string name="meterType">表类型</string>
-    <string name="meterSize">表径</string>
-    <string name="pressure">压力(bar)</string>
-    <string name="pressure2">压力</string>
-    <string name="userAddress">用户地址</string>
-    <string name="water_consumption_max">最高用水量</string>
-    <string name="water_consumption_min">最低用水量</string>
-    <string name="total_water_consumption">总用水量</string>
-    <string name="water_consumption_average">平均用水量</string>
-    <string name="date_example">2000-02-02</string>
-    <string name="tips_search_meter_warning">一、点击“查询”按钮将查询所有表具指定日期前7天内最后一次上传的报警信息，并与所选的报警项进行匹配，至少有一项相符的表具将被筛选并显示；\n二、点击查询结果的每一个表具标签可以显示该表具当次报警的详细信息。</string>
-
-    <string-array name="search_user_type">
-        <item>用户号</item>
-        <item>水表号</item>
-        <item>用户名</item>
-        <item>手机号</item>
-        <item>地&#160;&#160;&#160;&#160;址</item>
-    </string-array>
-
-    <string-array name="spinner_title">
-        <item>日常上传信息汇总表</item>
-        <item>日常上传信息综合图</item>
-        <item>周用水量条形统计图</item>
-        <item>月用水量条形统计图</item>
-        <item>年用水量条形统计图</item>
-        <item>月累计用水量折线图</item>
-        <item>年累计用水量折线图</item>
-    </string-array>
-
-    <string-array name="help_hydrantUser">
-        <item>①使用软件之前确保手机网络状态良好；</item>
-        <item>②二维码不清晰时可手动输入消火栓号；</item>
-        <item>③开、关阀按钮在20秒内不可重复点击；</item>
-        <item>④指令发出后10秒左右会收到反馈信息；</item>
-        <item>⑤用水期间可在首页查看实时用水状态；</item>
-        <item>⑥历史用水统计页面可以下拉刷新数据；</item>
-        <item>⑦地图页点击坐标点可导航到消火栓处；</item>
-        <item>⑧地图页导航功能需下载百度地图软件；</item>
-        <item>⑨用水记录查询列表点击表头项可排序；</item>
-        <item>⑩查询列表点击每一项可查看详细信息；</item>
-        <item>⑪双击或横向拉伸用水记录图表可放大；</item>
-        <item>⑫遇到消火栓问题可点击下方反馈按钮；</item>
-        <item>⑬软件问题可以在下方联系开发者反馈；</item>
-        <item>⑭多次提交不相关的信息可能导致封号。</item>
-    </string-array>
 
     <string name="versionCode">当前版本号:</string>
     <string name="example_versionCode">V1.0</string>
-    <string name="latest_data">最新数据</string>
-
-    <string name="error_view_no_data">暂无内容</string>
-    <string name="error_view_loading">加载中…</string>
-    <string name="error_view_load_error_click_to_refresh">内容加载失败\r\n点击重新加载</string>
-    <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
 
     <string name="loading">加载中…</string>
-    <string name="notification_disconnect_bluetooth_tools">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;您将断开手机与蓝牙工具的连接，断开后如再次使用蓝牙工具需重新连接，是否断开？</string>
-    <string name="notification_disconnect_bluetooth_printer">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;您将断开手机与蓝牙打印机的连接，断开后如再次使用蓝牙打印机需重新连接，是否断开？</string>
-    <string name="notification_open_gps_bluetooth_tools">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;因为系统限制，您需要打开定位服务才能搜索到蓝牙设备，当前定位服务已关闭，是否前往设置页面打开？</string>
-    <string name="notification_open_notification">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;因为系统限制，您需要手动授予通知权限，不授予权限将影响软件的正常使用，是否前往设置页面打开？</string>
-    <string name="notification_open_float_window">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;因为系统限制，您需要手动授予悬浮窗权限，不授予权限将影响软件的正常使用，是否立刻前往打开？</string>
-
-    <string name="main_navigation_readdata">读表数据</string>
-    <string name="readdata_meterid">请输入8位出厂编码</string>
-    <string name="readdata_check">标准单位</string>
-    <string name="readmeter_t1">出厂编码</string>
-
-    <string name="amenderr_meterid">出厂编码</string>
-    <string name="amenderr_readparameter">读流量系数</string>
-    <string name="amenderr_name">流量点</string>
-    <string name="amenderr_err">偏±00.0%</string>
-    <string name="amenderr_qnold">原始系数</string>
-    <string name="amenderr_qnnew">生成系数</string>
-    <string name="amenderr_qn">修常用</string>
-    <string name="amenderr_qn_1hint">修正比</string>
-    <string name="amenderr_qn_3hint">新系数</string>
-    <string name="amenderr_qn2">修 0. 2 </string>
-    <string name="amenderr_qn2_1hint">修正比</string>
-    <string name="amenderr_qn1">修 0. 1 </string>
-    <string name="amenderr_qn1_1hint">修正比</string>
-    <string name="amenderr_qmin">修最小</string>
-    <string name="amenderr_qmin_1hint">修正比</string>
-    <string name="amenderr_setAdjust">调整</string>
-    <string name="amenderr_setCancle">取消</string>
-    <string name="amenderr_setOk">确认</string>
-    <string name="amenderr_reset">恢复出厂值</string>
-
-    <string name="lcd_meterid">显示表号</string>
-    <string name="lcd_time">显示时间</string>
-    <string name="lcd_flowcoef">流量系数+分界点+温度补偿</string>
-    <string name="lcd_flowrate">瞬时流量</string>
-    <string name="lcd_total">高精度累计流量</string>
-    <string name="lcd_static">静态值</string>
-    <string name="lcd_sleeptimeandvol">睡眠+电压</string>
-    <string name="lcd_startandsize">始动+口径</string>
-    <string name="lcd_slopeandamend">斜率+修正值</string>
-    <string name="lcd_ver">版本号</string>
-    <string name="lcd_temperature">水温</string>
-    <string name="lcd_t1">进水温度</string>
-    <string name="lcd_t2">出水温度</string>
-    <string name="lcd_A1">显示A1界面</string>
-    <string name="lcd_A2">显示A2界面</string>
-    <string name="lcd_A3">显示A3界面</string>
-
-    <string name="setparameter_rechargesumheat">充热量</string>
-    <string name="setparameter_rechargesumwater">充流量</string>
-    <string name="setparameter_rechargesumheatunit">热量kW*h </string>
-    <string name="setparameter_rechargesumwaterunit">请输入流量值（单位：L）</string>
-    <string name="setparameter_initsumheathint">请输入初始热量</string>
-    <string name="setparameter_initsumwaterhint">请输入初始流量</string>
-    <string name="setparameter_clearheatcredit">清除热量</string>
-    <string name="setparameter_clearwatercredit">清除流量</string>
-    <string name="setparameter_initsumheat">初始热量</string>
-    <string name="setparameter_initsumwater">初始流量</string>
-
-    <string name="setparameter_setwaterpulse">设置脉冲参数</string>
-    <string name="setparameter_clearrst">清除复位计数</string>
-
-    <string name="setparameter_pulseparam">脉冲设置</string>
-    <string name="setparameter_loraparam">无线设置</string>
-
-    <string name="setparameter_readparameter">获取表号</string>
-    <string name="setparameter_meteridhint">请输入8位出厂编码</string>
-    <string name="setparameter_setmeterid">替换为11</string>
-    <string name="setparameter_openvalve">开阀</string>
-    <string name="setparameter_closevalve">关阀</string>
-    <string name="setparameter_amendmeterid">修改表号</string>
-    <string name="setparameter_amendmeteridhint">请输入8位出厂编码</string>
-    <string name="setparameter_insteadmeterid">替换至上</string>
-    <string name="setparameter_clearmeter">热表清零</string>
-    <string name="setparameter_initreport">初始报表</string>
-    <string name="setparameter_clearbatter">清电池符</string>
-    <string name="setparameter_adjusttime">校正时钟</string>
-    <string name="setparameter_endtime">修改截止日期</string>
-    <string name="setparameter_unitkwh">kW*h</string>
-    <string name="setparameter_unitgj">GJ</string>
-    <string name="setparameter_unitm">m³</string>
-    <string name="setparameter_unitgal">gal</string>
-    <string name="setparameter_amendx">修正系数</string>
-    <string name="setparameter_amendxhint">请输入修正系数</string>
-    <string name="setparameter_slope">斜率修正</string>
-    <string name="setparameter_slopehint">请输入斜率修正</string>
-    <string name="setparameter_startf">启动流量</string>
-    <string name="setparameter_startfhint">请输入启动流量</string>
-    <string name="setparameter_div1hint">分界点1</string>
-    <string name="setparameter_div2hint">分界点2</string>
-    <string name="setparameter_div3hint">分界点3</string>
-    <string name="setparameter_pointwhere">单位:</string>
-    <string name="setparameter_metersize">口径:</string>
-    <string name="setparameter_sleeptime">睡眠时间</string>
-    <string name="setparameter_sleeptimehint">请输入睡眠时间</string>
-    <string name="setparameter_programme">程序切换</string>
-    <string name="setparameter_settcoef">温度补偿</string>
-    <string name="setparameter_t1coefhint">T1补偿</string>
-    <string name="setparameter_t2coefhint">T2补偿</string>
-    <string name="setparameter_t1">T1温度系数</string>
-    <string name="setparameter_t1hint">请输入T1温度系数</string>
-    <string name="setparameter_t2">T2温度系数</string>
-    <string name="setparameter_t2hint">请输入T2温度系数</string>
-    <string name="setparameter_t3">T3温度系数</string>
-    <string name="setparameter_t3hint">请输入T3温度系数</string>
-    <string name="setparameter_t4">T4温度系数</string>
-    <string name="setparameter_t4hint">请输入T4温度系数</string>
-    <string name="setparameter_t5">T5温度系数</string>
-    <string name="setparameter_t5hint">请输入T5温度系数</string>
-    <string name="setparameter_settparameter">设温度系数</string>
-    <string name="setparameter_sendtx">请输入发送信息</string>
-    <string name="setparameter_cs16">+CS+16</string>
-    <string name="setparameter_send">发送</string>
-
-    <string name="topworx_setlorach">修改频道</string>
-
-    <string name="setgprsparameter_readreading">读取参数</string>
-    <string name="setgprsparameter_setreading">设置参数</string>
-    <string name="setgprsparameter_userreading">触发抄表</string>
-    <string name="setgprsparameter_userupdate">触发上传</string>
-    <string name="setgprsparameter_updateparam">上传参数</string>
-    <string name="setgprsparameter_updatecycle">周期:</string>
-    <string name="setgprsparameter_updatehour">时间点:</string>
-    <string name="setgprsparameter_readcycle">抄表周期</string>
-    <string name="setgprsparameter_pwrbattery">电池:</string>
-    <string name="setgprsparameter_pwrelectric">市电:</string>
-
-    <string name="setgprsparameter_txtset">设置</string>
-    <string name="setgprsparameter_txtread">读取</string>
-    <string name="setgprsparameter_imeihint">请输入11位IMEI号</string>
-    <string name="setgprsparameter_radiotcpserver">TCP服务</string>
-    <string name="setgprsparameter_radioudpserver">UDP服务</string>
-    <string name="year">年</string>
-    <string name="month">月</string>
-    <string name="day">日</string>
-    <string name="hyphen">-</string>
 
 
-    <string name="consumption_per_time">%1$sm³/次</string>
     <string name="exampleConsumption">%1$sm³</string>
-    <string name="exampleFlowRate">%1$sm³/h</string>
-    <string name="arrearageItems">%1$d笔</string>
-    <string name="arrearageAmount">%1$s元</string>
-    <string name="times_n">%1$s次</string>
-    <string name="pages_photos">%1$d张</string>
-    <string name="items_n">%1$d条</string>
-    <string name="seconds_wait">请等待%1$ss</string>
-    <string name="consumption_with_date">%1$sm³（%2$s）</string>
-    <string name="date_example1">2017&#8211;01&#8211;01</string>
-    <string name="network_disconnected">无网络连接，请检查网络</string>
-    <string name="consumption_per_time2">每次用水量（单位：m³）</string>
-    <string name="unit_cubic_meter">单位：立方米</string>
-    <string name="format_date1">yyyy年MM月dd日</string>
-    <string name="format_date2">yyyy-MM-dd</string>
-    <string name="format_time1">HH:mm:ss&#160;&#160;</string>
-    <string name="startTime">开始:%1$s</string>
-    <string name="endTime">结束:%1$s</string>
-    <string name="command_open_hydrantValve">%1$s消火栓%2$s开锁指令已发送%3$s\n</string>
-    <string name="command_close_hydrantValve">%1$s消火栓%2$s关锁指令已发送%3$s\n</string>
-    <string name="open_hydrantLock">%1$s消火栓%2$s阀门锁状态：开启\n</string>
-    <string name="close_hydrantLock">%1$s消火栓%2$s阀门锁状态：关闭\n</string>
-    <string name="warning_hydrantValve2">%1$s消火栓%2$s阀门未关紧，请关紧阀门\n</string>
-    <string name="useStatus_hydrant_start">消火栓%1$s阀门锁开启，消耗水量：</string>
-    <string name="useStatus_hydrant_inUse">消火栓%1$s正在使用中，消耗水量：</string>
-    <string name="useStatus_hydrant_finish">消火栓%1$s结束使用，消耗水量：</string>
-    <string name="useStatus_hydrant">%1$s%2$s%3$sm³\n</string>
-    <string name="number_user">共查询到%1$d条同名用户</string>
-    <string name="coordinate_setting">（%1$s,%2$s）</string>
 
 
     <string name="fail_find_version">未找到版本号</string>
-    <string name="error_hydrantID">输入的消火栓ID不正确</string>
-    <string name="scan_or_input_hydrantID">请先扫描或输入消火栓编号</string>
-    <string name="packageName_qq">com.tencent.mobileqq</string>
-    <string name="not_installed_qq">本机未安装QQ应用</string>
-    <string name="sms_to">smsto:15151865258</string>
-    <string name="tel_to">tel:15151865258</string>
-    <string name="input_feedback">请输入反馈信息</string>
 
 
     <string name="click_again_exit">再按一次退出程序</string>
-    <string name="fail_login_error_username_or_password">用户名或密码不正确</string>
-    <string name="error_address">请求地址异常</string>
-    <string name="fail_getData">请求异常</string>
-    <string name="sending_command">发送指令中，请稍后</string>
-    <string name="server_is_busy">服务器繁忙</string>
-    <string name="error_server">服务器异常</string>
-    <string name="error_socket">通信异常，实时信息无法查看</string>
-    <string name="no_water_useData">暂无用水记录噢~</string>
-    <string name="commit_successfully">上传成功，感谢您的反馈</string>
-    <string name="no_gps_hydrant">该消火栓暂无GPS信息</string>
-    <string name="no_user">当前无用户</string>
-    <string name="time_example2">1999&#8211;01&#8211;01 00:00:00</string>
 
 
-    <string name="isFirstRun">isFirstRun</string>
     <string name="waterCompanyName">waterCompanyName</string>
-    <string name="HydrantCompanyName">HydrantCompanyName</string>
-    <string name="HeatCompanyName">HeatCompanyName</string>
     <string name="fieldName">fieldName</string>
     <string name="fieldValue">fieldValue</string>
     <string name="supplierId">supplierId</string>
@@ -555,580 +39,40 @@
     <string name="villageId">villageId</string>
     <string name="buildingId">buildingId</string>
     <string name="entranceId">entranceId</string>
-    <string name="lastMeterID">lastMeterID</string>
-    <string name="Hydrant_USER_water">Hydrant_USER_water</string>
-    <string name="Hydrant_USER_user">Hydrant_USER_user</string>
-    <string name="Meter_Manager_Name">Meter_Manager_Name</string>
-    <string name="Setting_Show_Lead">Setting_Show_Lead</string>
-    <string name="Setting_Show_Hierarchy">Setting_Show_Hierarchy</string>
-    <string name="Setting_Show_SocketText_Hydrant">Setting_Show_SocketText_Hydrant</string>
-    <string name="has_read_alarm_enabled">has_read_alarm_enabled</string>
-    <string name="has_read_alarm_parameters">has_read_alarm_parameters</string>
-    <string name="LastSetting_Pressure_Mutation">LastSetting_Pressure_Mutation</string>
-    <string name="Put_HydrantId_Map">Put_HydrantId_Map</string>
 
-
-    <string name="permission_storage">存储权限</string>
-    <string name="permission_location">定位权限</string>
-    <string name="permission_camera">相机</string>
-    <string name="permission_dialog_title">Start %s</string>
-    <string name="permission_dialog_msg">为了您能正常使用 %s, 您需要允许软件获取以下权限</string>
-    <string name="permission_title">请允许访问 %s</string>
-    <string name="permission_denied">我们需要访问 %1$s,否则, 您可能不能使用 %2$s</string>
-    <string name="permission_denied_with_naac">"Because %1$s cannot use %2$s,Can not run normally,Please open permissions before using.\n\nSetup path: Apps->%3$s->Permissions"</string>
-    <string name="permission_cancel">取消</string>
-    <string name="permission_ensure">进入</string>
-    <string name="permission_reject">拒绝</string>
-    <string name="permission_btn_next">下一个</string>
-    <string name="permission_go_to_setting">转到“设置”</string>
-
-
-    <string name="permission_cus_item_phone">拨号</string>
-
-    <string name="PrinterTest">打印测试</string>
-    <string name="CutPaper">切纸</string>
-    <string name="printContent">请输入您要打印的内容！</string>
-    <string name="Logs">江苏迈拓©-2017</string>
-    <string name="print_faild">打印失败&#8230;&#8230;&#8230;</string>
-    <string name="cutPaper_faild">切纸失败&#8230;&#8230;&#8230;</string>
-    <string name="connecting">正在连接</string>
-    <string name="disconnected">未连接</string>
-    <string name="Connected">已连接</string>
-    <string name="PlsChoiceDevice">请选择已配对的设备&#8230;&#8230;&#8230;</string>
-    <string name="NotBluetoothAdapter">设备没有蓝牙适配器！</string>
-    <string name="XPrinterhint">蓝牙没有打开，或没有配对设备\n是否在设定界面中打开？</string>
-    <string name="ConnectFailed">连接失败&#8230;&#8230;&#8230;</string>
-
-
-    <string name="image">打印图片</string>
-    <string name="text">打印文本</string>
-    <string name="toast_discon_success">断开连接成功</string>
-    <string name="toast_discon_faile">断开连接失败</string>
-    <string name="con_success">连接成功</string>
-    <string name="con_failed">连接失败</string>
-    <string name="con_has_discon">连接已断开</string>
-    <string name="qrcode">打印二维码</string>
 
     <string name="label_ok">确定</string>
     <string name="permission_title_rationale">权限需求</string>
     <string name="permission_read_storage_rationale">选择图片时需要读取权限</string>
     <string name="permission_write_storage_rationale">拍照时需要存储权限</string>
 
-    <string name="add_pgc_subscribe">添加订阅</string>
-    <string name="detail_write_comment">写评论…</string>
-    <string name="empty_comment_hint">暂无评论，点击抢沙发</string>
-    <string name="feed_search_tip">查找产品或服务</string>
-    <string name="forum_introduce">话题介绍</string>
     <string name="resend_info_time">重新发送(%ds)</string>
-    <string name="subscribe_hint_text_2"> 从这些头条号开始吧！</string>
-
-    <string name="tips_not_wifi">您当前正在使用移动网络，继续播放将消耗流量</string>
-    <string name="tips_not_wifi_confirm">继续播放</string>
-    <string name="tips_not_wifi_cancel">停止播放</string>
-    <string name="no_url">播放地址无效</string>
-    <string name="has_read">已抄</string>
-    <string name="all_meter">所有</string>
 
 
     <string name="update_version">版本升级（%1$s）</string>
     <string name="update_version2">%1$s（%2$s）</string>
     <string name="file_size_m">%1$sM</string>
-    <string name="num_left">（剩余%1$d字）</string>
     <string name="date">%1$s</string>
     <string name="versionType_stable">正式版</string>
     <string name="versionType_preview">预览版</string>
 
 
-    <string name="Goto_MeterChartFragment">Goto_MeterChartFragment</string>
-    <string name="Goto_MeterControlFragment">Goto_MeterControlFragment</string>
-    <string name="Goto_ReadMeterFragment">Goto_ReadMeterFragment</string>
-    <string name="Put_ReadMeterFragment">Put_ReadMeterFragment</string>
-    <string name="Put_MeterId_Chart">Put_MeterId_Chart</string>
-    <string name="Location_changed">Location_changed</string>
-
-
-    <string name="SOCKET_IP">SOCKET_IP</string>
-    <string name="SOCKET_PORT">SOCKET_PORT</string>
-
-    <string name="exit">确定退出</string>
-    <string name="exit_tip">退出后将需要重新登录，确定要退出?</string>
-    <string name="confirm">确定</string>
-    <string name="cancel">取消</string>
-    <string name="certain">确定</string>
-    <string name="wait">等待</string>
-    <string name="next_button_txt">下一步</string>
-    <string name="complete_txt">完成</string>
-    <string name="operational_fail">操作失败</string>
-    <string name="common_passwd_error">密码不正确</string>
-    <string name="login_password_tv_txt">密码</string>
-    <string name="web_login_button_txt">萤石OAuth协议登录</string>
-    <string name="platform_login_button_txt">私有云后台对接授权</string>
-    <string name="please_input_platform_accesstoken_txt">请输入私有云调用萤石开平的获取acToken接口后得到的acToken：</string>
-    <string name="please_input_phonenumber_txt">请输入手机号码</string>
-    <string name="update_exit">退出</string>
-    <string name="sms_verify_code_received">请输入您收到的手机验证码</string>
-    <string name="please_input_sign_txt">请输入您的json字符串</string>
-    <string name="please_input_userid_txt">请输入您的userid</string>
-    <string name="localmgt_video_square_txt">视频广场</string>
-    <string name="wifi_set">配置Wi-Fi</string>
-    <string name="added_camera_success_txt">添加成功</string>
-    <string name="open_camera_fail">打开相机失败，请选择手动输入添加设备</string>
-    <string name="serial_number_error">序列号错误</string>
-    <string name="realplay_play_fail">视频播放失败</string>
-    <string name="realplay_password_error_title">请输入设备密码</string>
-    <string name="realplay_encrypt_password_error_title">请输入视频图片加密密码</string>
-    <string name="realplay_password_error_message1">初始密码为12345，若密码已被修改，请输入修改后的密码</string>
-    <string name="realplay_encrypt_password_error_message">您的视频已加密，请输入密码进行查看，初始密码为机身标签上的验证码，如果没有验证码，请输入ABCDEF（密码区分大小写）</string>
-    <string name="realplay_password_error_message3">您的设备版本过低，需要输入设备密码，建议您升级设备</string>
-    <string name="realplay_password_error_message4">视频已加密，请联系分享者获取密码进行查看（密码区分大小写）</string>
-    <string name="realplay_play_fail_becauseof_network">视频播放失败，请检查您的网络</string>
-    <string name="realplay_play_talkback_network_exception">网络异常，对讲已关闭</string>
-    <string name="realplay_play_talkback_request_timeout">请求超时，对讲已关闭</string>
-    <string name="realplay_play_talkback_fail">对讲开启失败</string>
-    <string name="realplay_play_talkback_fail_ison">同一时间只能与一台设备进行对讲哦，请停止其他对讲后再尝试</string>
-    <string name="realplay_play_talkback_fail_privacy">隐私保护模式下无法对讲</string>
-    <string name="realplay_set_vediomode_fail">视频质量切换失败</string>
-    <string name="realplay_set_fail_network">设置失败，请检查您的网络</string>
-    <string name="realplay_set_fail_status">视频播放失败，设备已开启隐私保护</string>
-    <string name="realplay_fail_device_not_exist">设备不在线</string>
-    <string name="realplay_fail_connect_device">播放失败，连接设备异常</string>
-    <string name="realplay_loading">正在加载，请稍候...</string>
-    <string name="realplay_login_password_error">登录设备失败</string>
-    <string name="realplay_login_password_msg">初始密码为设备验证码，若设备已注册平台，请输入用户ID</string>
-    <string name="realplay_play_no_video_source">没有视频源</string>
     <!-- 历史录像回放界面 -->
-    <string name="camera_not_online">设备不在线</string>
-    <string name="remoteplayback_fail">视频播放失败</string>
-    <string name="remoteplayback_over_link">设备连接数过大，停止其他连接后再试试吧</string>
-    <string name="remoteplayback_connect_server_error">连接服务器失败，请重试</string>
-    <string name="remoteplayback_connect_device_error">播放中断，请重试</string>
-    <string name="remoteplayback_searchfile_fail_for_network">查询录像失败,请检查您的网络</string>
-    <string name="remoteplayback_searchfile_fail_for_device">查询录像失败</string>
-    <string name="remoteplayback_norecordfile">没有查询到录像</string>
-    <string name="remoteplayback_norecordfile_alarm">没有查询到该时刻的报警录像</string>
-    <string name="remoteplayback_capture_fail">抓图失败</string>
-    <string name="remoteplayback_capture_fail_for_memory">抓图失败,存储空间已满</string>
-    <string name="remoteplayback_record_fail">录像失败</string>
-    <string name="remoteplayback_record_fail_for_memory">录像中断,存储空间已满</string>
-    <string name="remoteplayback_SDCard_disable_use">存储卡不可用</string>
     <!-- 条形码、二维码扫描 -->
-    <string name="scan_cue_txt">请将设备机身或说明书上的二维码放置在扫描框内，手机将自动识别</string>
-    <string name="scan_title_txt">序列号扫描</string>
-    <string name="get_camera_list_fail">获取设备列表失败</string>
-    <string name="refresh">重试</string>
-    <string name="later_alarm">消息推送</string>
-    <string name="today">今天</string>
-    <string name="select_date">请选择日期</string>
-    <string name="detail_del_device_btn_tip">确定要删除设备？</string>
-    <string name="detail_del_device_success">删除成功</string>
-    <string name="message_no_data_text">无消息记录</string>
-    <string name="xlistview_header_hint_normal">下拉刷新</string>
-    <string name="xlistview_header_hint_ready">松开刷新数据</string>
-    <string name="xlistview_header_hint_more">下拉加载更多...</string>
-    <string name="xlistview_header_hint_loading">正在加载，请稍候...</string>
-    <string name="xlistview_header_last_time">最近更新</string>
-    <string name="xlistview_footer_hint_normal">上拉加载更多...</string>
-    <string name="xlistview_footer_hint_no_more_device">无更多设备</string>
-    <string name="xlistview_footer_hint_ready">松开载入更多</string>
-    <string name="xlistview_footer_no_more">无更多</string>
-    <string name="xlistview_footer_no_more_msg">无更多消息</string>
-    <string name="get_message_fail_service_exception">获取事件消息失败</string>
-    <string name="message_encrypt_inputpsw_tip_title">您的图片已加密，请输入密码进行查看，初始密码为机身标签上的验证码，如果没有验证码，请输入ABCDEF（密码区分大小写）</string>
-    <string name="message_refresh_fail_network_exception">获取事件消息失败，请检查您的网络</string>
-    <string name="message_refresh_fail_server_exception">获取事件消息失败，服务器异常</string>
-    <string name="message_come_from_tip">来自：</string>
-    <string name="message_video">消息录像</string>
-    <string name="message_live">现场直播</string>
-    <string name="alarm_type_remotecontrol">发生紧急遥控按钮事件</string>
-    <string name="alarm_type_infrared">发生人体感应事件</string>
-    <string name="alarm_type_door">发生门磁报警</string>
-    <string name="alarm_type_smoke">发生烟感报警</string>
-    <string name="alarm_type_gas">发生可燃气体报警</string>
-    <string name="alarm_type_water">发生水侵报警</string>
-    <string name="alarm_type_urgent_button">发生紧急按钮报警</string>
-    <string name="alarm_type_person_alarm">发生人体感应报警</string>
-    <string name="ez_alarm_type_person_alarm">人体感应事件</string>
-    <string name="alarm_type_motion_detection">发生移动侦测报警</string>
-    <string name="alarm_type_baby_cry">发生婴儿啼哭报警</string>
-    <string name="alarm_type_unknown">发生未知类型报警</string>
-    <string name="alarm_message_del_fail_txt">删除失败</string>
-    <string name="alarm_message_del_fail_network_exception">删除失败，请检查您的网络</string>
-    <string name="local_network_exception">没有可用网络，请检查您的网络</string>
-    <string name="push_event_get">收到</string>
-    <string name="push_event_get_count">条推送消息。</string>
-    <string name="push_event_from">来自：</string>
-    <string name="get_device_picture_fail">获取设备图片失败</string>
-    <string name="input_device_picture_uuid">请输入设备图片uuid</string>
-    <string name="input_device_picture_size">请输入图片宽度(0-1280像素)</string>
-    <string name="device_picture">设备图片uuid</string>
-    <string name="input_device_video_uuid">请输入设备录像uuid</string>
     <!-- 一键配置模块 -->
-    <string name="auto_wifi_title_add_device">设备添加</string>
-    <string name="auto_wifi_dialog_connecting_msg">添加过程稍稍有点漫长，耐心等一会儿哦~</string>
-    <string name="auto_wifi_connecting_msg1">请将手机靠近设备，添加过程大约需要等待1分钟，请稍候…</string>
-    <string name="auto_wifi_connecting_msg2">正在注册到服务器，请稍候…</string>
-    <string name="auto_wifi_connecting_msg3">正在添加设备，请稍候…</string>
-    <string name="aotu_wifi_add_device_success">恭喜您，添加成功 ！</string>
-    <string name="auto_wifi_connecting_failed">Wi-Fi连接失败，请重试或返回检查Wi-Fi密码是否输入正确</string>
-    <string name="auto_wifi_register_failed">设备未连接到萤石云，请检查设备所在网络是否能正常上网后重试</string>
-    <string name="auto_wifi_add_device_failed">添加失败，请重试</string>
-    <string name="auto_wifi_dialog_title_wifi_required">需要将手机连接到Wi-Fi</string>
-    <string name="auto_wifi_dialog_btn_wifi">连接Wi-Fi</string>
-    <string name="auto_wifi_line_msg">请将您的设备和路由器用网线连接好</string>
-    <string name="auto_wifi_line_connected">我已连接好</string>
-    <string name="auto_wifi_line_connect">有线连接</string>
-    <string name="auto_wifi_config_tip">正在使用手机连接的Wi-Fi网络，请输入密码，如无密码请点击下一步</string>
-    <string name="auto_wifi_net">网络</string>
-    <string name="auto_wifi_ssid">ssid</string>
-    <string name="auto_wifi_cer_config_title">网络连接</string>
-    <string name="countdown">留言时长还剩%d秒</string>
-    <string name="talking">对讲中…</string>
-    <string name="press_to_talk_release_to_listen">按住说话\n松开收听</string>
-    <string name="reset_10_sec_to_release">连接电源的状态下，长按设备的reset键10秒后松开</string>
-    <string name="connect_device_to_router">请将您的设备和路由器用网线连接好，等待5s~10s至设备上线</string>
-    <string name="if_your_device_has_set_time">如果你的设备已经设置了在线时间，则将会按照你设置的时间进行上下线</string>
-    <string name="wired_connection">有线连接</string>
-    <string name="if_your_device_has_been_used">如果你的设备之前已经被使用，请先复位设备</string>
-    <string name="how_to_reset">如何复位？</string>
-    <string name="already_reset">复位好了</string>
-    <string name="please_open_wifi_network">请到“设置”-“Wi-Fi”功能中开启Wi-Fi并连接到网络</string>
-    <string name="retry">重试</string>
-    <string name="wifi_connection_finish_need_refresh">设备状态更新稍有延迟，需要等待5~10s的时间，请在“我的”界面手动刷新</string>
-    <string name="reset_device">复位设备</string>
-    <string name="start_voice_talk">正在发起对讲</string>
-    <string name="set_device_wifi_network_need_reset_the_device">你正在配置设备的Wi-Fi网络，需要复位设备，请在连接电源的状态下，断开网线，长按设备上的reset键10秒后松开</string>
-    <string name="no_more_alarm_tip">消息最多可保存7天</string>
-    <string name="no_more_leave_tip">最多记录100条消息，每条消息最多可保存7天</string>
-    <string name="device_wificonfig_hasline_introduce">请在连接好设备的电源后，将设备和路由器用网线连接好，等待5s~10s至设备上线</string>
-    <string name="auto_wifi_network_add_device">有线连接添加</string>
-    <string name="receice_leave_msg_video">给你发了一条视频留言消息</string>
-    <string name="receice_leave_msg_audio">给你发了一条语音留言消息</string>
-    <string name="setting_video_level">正在设置画面质量…</string>
-    <string name="push_out_event_alarm_title">推送消息</string>
-    <string name="realplay_share_time_over">分享已结束，下回再见~</string>
-    <string name="realplay_no_permission">无预览权限</string>
-    <string name="realplay_share_no_permission">已经停止分享</string>
-    <string name="scan_device_add_by_others">此设备已被别人添加</string>
-    <string name="unknow_ssid">&lt;unknown ssid&gt;</string>
-    <string name="video_square">视频广场</string>
-    <string name="get_sms_code">获取短信验证码</string>
-    <string name="get_sms_code_fail">获取短信验证码失败</string>
-    <string name="verify_sms_code_fail">验证短信验证码失败</string>
-    <string name="verify_sms_code_success">验证短信验证码成功</string>
-    <string name="open_ys_service_fail">开通萤石云服务失败</string>
-    <string name="open_ys_service_success">开通萤石云服务成功</string>
-    <string name="secure_validatee_fail">安全验证失败</string>
-    <string name="secure_validate_success">安全验证成功</string>
-    <string name="please_input_sign_get_sms_txt">请输入私有云后台组装的账户绑定的短信签名认证的json字符串：/n（若对流程不清楚，请阅读《私有云账户对接流程》）</string>
-    <string name="please_input_phone_txt">请输入手机号码开通萤石云服务：/n（若对流程不清楚，请阅读《私有云账户对接流程》）</string>
-    <string name="goto_cameralist_page_txt">进入设备里列表页面</string>
-    <string name="submit_sms_code">提交短信验证</string>
-    <string name="open_ys_service">开通萤石云服务</string>
-    <string name="secure_validate">硬件安全验证</string>
-    <string name="submit_secure_validate">提交安全验证</string>
-    <string name="check_feature_code_fail">验证硬件特征码失败</string>
-    <string name="device_is_added">%s设备已添加</string>
-    <string name="device_not_exist">设备不存在</string>
-    <string name="sms_verify_bind_error">该appkey下已绑定重复的的userId或phone！</string>
-    <string name="refresh_empty_hint">没有内容哦，下拉刷新试试？</string>
-    <string name="refresh_fail_hint">拉取内容失败了，下拉刷新试试？</string>
-    <string name="my_collect">我的收藏</string>
-    <string name="collect_success">收藏成功</string>
-    <string name="cancel_collect_success">取消收藏成功</string>
-    <string name="collect_fail">收藏失败</string>
-    <string name="cancel_collect_fail">取消收藏失败</string>
-    <string name="cities">城市</string>
-    <string name="cityConfig">配置</string>
-    <string name="add_device_scan">扫一扫添加</string>
-    <string name="add_device_discover">发现添加</string>
-    <string name="add_device_input">输入添加</string>
-    <string name="input_device_verify_code">请输入设备验证码</string>
-    <string name="add_device">添加设备</string>
-    <string name="add_device_success">添加设备成功</string>
-    <string name="add_device_fail">添加设备失败</string>
-    <string name="add_device_fail_network_exception">添加设备失败，请检查您的网络</string>
-    <string name="discovering_device">正在发现设备，请稍候...</string>
-    <string name="discover_device_done">发现设备结束</string>
-    <string name="wifi_connected">已连网</string>
-    <string name="plat_connected">已注册</string>
-    <string name="added_by_me">已添加</string>
-    <string name="added_by_other">被添加</string>
-    <string name="local_realplay">本地预览</string>
-    <string name="device_password_is_null">设备密码不能为空</string>
-    <string name="device_defence_open_success">活动检测开启成功</string>
-    <string name="realplay_close_sound_localization_fail">关闭听声辨位失败</string>
-    <string name="realplay_open_sound_localization_fail">开启听声辨位失败</string>
-    <string name="source_detection_off">OFF</string>
-    <string name="source_detection_on">ON</string>
-    <string name="device_defence_open_fail">活动检测开启失败</string>
-    <string name="device_defence_close_success">活动检测关闭成功</string>
-    <string name="device_defence_close_fail">活动检测失关闭</string>
-    <string name="realplay_full_talk_start_tip">你可以开始说话了</string>
-    <string name="camera_lens_too_busy">镜头转动中，请稍候</string>
-    <string name="ptz_is_preseting">镜头转动中，请稍候</string>
-    <string name="ptz_control_timeout_sound_lacalization_failed">听声辨位已开启，操作失败</string>
-    <string name="ptz_control_timeout_cruise_track_failed">轨迹巡航中，请稍候</string>
-    <string name="ptz_preset_invalid_position_failed">当前位置已被删除，请返回刷新</string>
-    <string name="ptz_preset_current_position_failed">当前就在这个位置哦</string>
-    <string name="ptz_preset_sound_localization_failed">听声辨位中，请稍候</string>
-    <string name="ptz_operation_failed">操作失败</string>
-    <string name="ptz_operation_too_frequently">操作太频繁啦，先歇歇吧</string>
-    <string name="ptz_preset_exceed_maxnum_failed">已经不能收藏更多了</string>
-    <string name="ptz_privacying_failed">镜头已遮蔽，无法操作云台</string>
-    <string name="ptz_mirroring_failed">语音对讲中，无法操作云台</string>
 
-    <string name="quality_hd">高清</string>
-    <string name="quality_balanced">均衡</string>
-    <string name="quality_flunet">流畅</string>
-    <string name="ptz">云台</string>
-    <string name="talk">对讲</string>
-    <string name="capture">截图</string>
-    <string name="record">录像</string>
-    <string name="close_camera_lens">镜头遮蔽</string>
-    <string name="open_camera_lens">镜头开启</string>
-    <string name="camera_lens_closed">镜头遮蔽中</string>
-    <string name="camera_lens_closing">正在遮蔽镜头...</string>
-    <string name="camera_lens_opening">正在取消遮蔽...</string>
-    <string name="close_source_localization">听声辨位关闭</string>
-    <string name="open_source_localization">听声辨位开启</string>
-    <string name="loading_text_default">加载中，请稍候</string>
-    <string name="realplay_no_encrypt_password_error">视频已加密，播放失败</string>
-    <string name="readed">已读</string>
-
-    <string name="touch_to_load">轻触屏幕重新加载</string>
-    <string name="no_remote_data">这一天静悄悄的，什么都没录下~</string>
-    <string name="delete">删除</string>
-    <string name="auto_play_time">%s秒钟后为你自动播放下一段视频</string>
-    <string name="play_hour">点</string>
-    <string name="more_local_image">更多本地录像</string>
-    <string name="local_video_not_delete">本地录像不支持删除</string>
-    <string name="local_play_hour">点</string>
-
-    <string name="scan_search_probe_qrcode">探测器机身上的二维码</string>
-    <string name="scan_probe_qrcode_error">非探测器设备无法关联哦~</string>
-    <string name="unable_identify_two_dimensional_code_tip">无法识别二维码，你可以点击屏幕\n右上角的按钮手动输入</string>
-    <string name="query_camera_fail_network_exception">查询失败，网络不给力</string>
-    <string name="serial_number_is_null">序列号不能为空</string>
-    <string name="serial_add_hint">请输入设备9位序列号</string>
-    <string name="probe_not_support_tip">不支持序列号添加探测器哦～</string>
-    <string name="scan_network_unavailible">尚未连接好网络</string>
-    <string name="scan_connet_network">连接网络</string>
-    <string name="unbind_to_bind">解绑添加</string>
-    <string name="promptUserToActivate">非萤石设备请先激活设备 &gt;&gt;</string>
-    <string name="scan_add">添加</string>
-    <string name="please_connect_the_power">添加时，请确保你的设备已连接好电源</string>
-    <string name="no_result_text">没有查询到结果</string>
-    <string name="querying_camera_text">正在查询设备信息，请稍等...</string>
-    <string name="result_txt">结果</string>
-    <string name="please_open_wifi_network_sadp">请开启手机WLAN，并保证手机和设备网络连在同一路由器下</string>
-    <string name="connect_wlan">连接WLAN</string>
-    <string name="camera_password_is_null">设备密码不能为空</string>
-    <string name="camera_password_error">设备密码错误</string>
-    <string name="serial_number_put_the_right_no">请输入正确的序列号</string>
-    <string name="added_camera_txt">你已经添加过此设备</string>
-    <string name="serial_add_password_error_title">请输入设备密码</string>
-    <string name="add_camera_fail_network_exception">添加失败，请检查您的网络</string>
-    <string name="serial_input_text">手动输入</string>
-    <string name="scan_device_search">设备搜索</string>
-    <string name="realplay_verifycode_error_message0">请输入设备验证码，验证码位于机身标签上，如果您的设备没有验证码，请输入默认值ABCDEF（验证码为大写）</string>
-    <string name="camera_detail_verifycode_error_title">请输入设备验证码</string>
-    <string name="realplay_verifycode_error_placehold">验证码位于机身标签上</string>
-    <string name="query_camera_fail">查询失败</string>
-    <string name="auto_wifi_device_you_added_already">设备已添加</string>
-    <string name="query_camera_fail_network_exception_or_server_exception">查询失败，网络不给力</string>
-    <string name="query_camera_fail_server_exception">查询失败，服务器太忙了</string>
-    <string name="seek_camera_fail_device_not_support_shipin7">平台不支持型号添加</string>
-    <string name="query_camera_fail_repeat_error">操作失败，设备已被添加</string>
     <!--
     <string name="tip_heard_voice">请将设备插上电后等待大约30秒，直到听到“请用萤石客户端配置Wi-Fi”</string>
      -->
-    <string name="auto_wifi_step_one_title">第一步，准备好设备</string>
-    <string name="auto_wifi_step_two_title">第二步，连接Wi-Fi</string>
-    <string name="auto_wifi_step_three_title">第三步，添加设备</string>
     <!--
     <string name="autowifi_heard_voice">我已听到语音提示</string>
     <string name="autowifi_not_heard_voice">我没有听到语音提示</string>
      -->
-    <string name="device_reset_ok">我已重启好</string>
-    <string name="device_reset_title">重启设备</string>
-    <string name="device_reset_tip">长按设备上的reset键10秒后松开，并等待大约30秒直到设备启动完成</string>
-    <string name="device_unsupport_5g_wifi">如果你使用的是双频路由器，请不要让摄像机连接5G频段的Wi-Fi</string>
-    <string name="interface_call_demo_txt">接口调用demo</string>
-    <string name="ui_call_demo_txt">UI界面demo</string>
-    <string name="auto_wifi_cer_config_title1">网络连接(1/2)</string>
-    <string name="auto_wifi_cer_config_title2">第二步，连接Wi-Fi</string>
-    <string name="add_camera_success_tip">你可以在电脑上登录i.ys7.com，在“我的店铺”里开启Wi-Fi营销了</string>
-    <string name="goto_help_error_page">去帮助看看</string>
-    <string name="cloud_free">开通免费云存储</string>
-    <string name="more">了解更多</string>
-    <string name="auto_wifi_tip_connecting_wifi_ok">已配置好Wi-Fi网络</string>
-    <string name="auto_wifi_tip_connecting_wifi">连接Wi-Fi网络</string>
     <!-- 下列字符为消除xml警告而定义 -->
-    <string name="describtion" />
-    <string name="auto_wifi_tip_connecting_wifi_ing">萤小石正在努力配置Wi-Fi网络</string>
-    <string name="auto_wifi_tip_connecting_server_ing">快了快了，正在注册到萤石平台</string>
-    <string name="auto_wifi_tip_connecting_server_ok">已注册到萤石平台</string>
-    <string name="auto_wifi_tip_binding_account_ing">绑到你的账号下就大功告成了哦</string>
-    <string name="auto_wifi_title_add_device2">第三步，添加设备</string>
-    <string name="save_encrypt_password_fail_network_exception">设置失败，请检查您的网络</string>
-    <string name="start_cloud">正在开启云存储，请稍候…</string>
-    <string name="auto_wifi_line_connect_title">有线连接</string>
-    <string name="auto_wifi_network_add_device2">有线连接添加</string>
-    <string name="auto_wifi_network_add_device1">有线连接添加</string>
-    <string name="auto_wifi_tip_connecting_server">注册萤石平台</string>
-    <string name="auto_wifi_tip_binding_account">绑定到你的账号</string>
-    <string name="device_error">设备异常</string>
-    <string name="auto_wifi_add_device_failed2">添加失败</string>
-    <string name="device_bind_account">百度云·萤石设备需要绑定百度账号后才能继续使用</string>
-    <string name="enable_cloud_fause">云存储开通失败</string>
-    <string name="enable_cloud_fause_retry">开通失败，请重试。你也可以随时在"设置"—"存储状态"中开通云存储</string>
-    <string name="not_now">暂不开通</string>
-    <string name="scan_device_serial_no">序列号：</string>
-    <string name="am">上午</string>
-    <string name="pm">下午</string>
-    <string name="wifi_setting">Wi-Fi连接</string>
-    <string name="cloud">云存储</string>
-    <string name="about_alarm_sound_mode">探测器或紧急按钮发送报警时，会发出声音提醒</string>
-    <string name="alarm_sound_mode">报警声音</string>
-    <string name="defence_plan_tip">开启了防护计划后，报警盒子会按照你设置的时间自动切换防护模式</string>
-    <string name="set_defence_plan">设置防护计划</string>
-    <string name="defence_plan">防护计划</string>
-    <string name="detail_defend_c1_c2_f1">活动检测提醒</string>
-    <string name="bind_baidu_account">绑定百度帐号</string>
-    <string name="wechat_interconnect">微信互联</string>
-    <string name="qrcode_card">二维码名片</string>
-    <string name="storage_status">存储状态</string>
-    <string name="detail_version">设备版本</string>
-    <string name="version_newest">已是最新版本</string>
-    <string name="device_transfter_desc">你可以将设备转给他人使用，转移后此设备将不再属于你</string>
-    <string name="modify_online_schedule">如需设置或修改在线时间 ，请在电脑上登录萤石云网页版进行操作</string>
-    <string name="online_time">在线时间</string>
-    <string name="detail_safe_mode_tip">开启后，您的视频与图片将会受密码保护</string>
-    <string name="password_security_txt">修改密码</string>
-    <string name="detail_notify_online">设备下线消息接收</string>
-    <string name="detail_safe_mode">视频图片加密</string>
-    <string name="device_ptz_flip">画面翻转</string>
-    <string name="device_status_lamp">设备状态灯</string>
-    <string name="device_warning_tone">设备语音提示</string>
-    <string name="device_ptz_flip_desc">点击后视频画面会翻转显示，适合倒装的场景</string>
-    <string name="device_transfter">转移设备</string>
-    <string name="route_status_light">路由器状态灯</string>
-    <string name="device_not_online">设备不在线，无法获取更多信息</string>
-    <string name="more_setting">更多设置</string>
-    <string name="device_info_del">删除设备</string>
-    <string name="detail_safe_btn_tip">如果你的视频正在分享，开启后他人将无法查看视频，确定要开启？</string>
-    <string name="detail_notify_online_close_btn_tip">关闭通知后，下线消息将不会推送到手机，确定关闭？</string>
-    <string name="device_wifi_set_no_in_subnet">设备需与手机在同一路由器下才能设置Wi-Fi连接哦~</string>
-    <string name="set_ptz_flip_success">翻转成功</string>
-    <string name="encrypt_password_open_fail_networkexception">操作失败，请检查您的网络</string>
-    <string name="set_ptz_flip_fail">翻转失败</string>
-    <string name="encrypt_password_open_success">操作成功</string>
-    <string name="encrypt_password_open_fail">操作失败</string>
-    <string name="cameradetail_open_success">开启成功</string>
-    <string name="cameradetail_close_success">关闭成功</string>
-    <string name="enable_fause_network">开启失败，请检查你的网络</string>
-    <string name="disable_fause_network">关闭失败，请检查你的网络</string>
-    <string name="cameradetail_open_fail_not_online">开启失败，设备不在线</string>
-    <string name="enable_fause_exception">开启失败，服务器异常</string>
-    <string name="disable_fause_exception">关闭失败，服务器异常</string>
-    <string name="alarm_setted_success">开启成功</string>
-    <string name="alarm_setted_close_success">关闭成功</string>
-    <string name="device_have_not_added">设备未添加或已删除</string>
-    <string name="device_not_set">未设置</string>
-    <string name="check_all_message">全部标记为已读</string>
-    <string name="select_all">全选</string>
-    <string name="go_to_see_immediately">立即去看看</string>
-    <string name="no_leave_device_prompt">有了萤石F1设备，才能进行视频留言哦</string>
-    <string name="goto_mall_to_see">去商城看看</string>
-    <string name="no_event_device_prompt">你的账户下还没有添加任何报警设备</string>
-    <string name="network_error_retry_prompt">网络不给力哦~</string>
-    <string name="event_message">事件消息</string>
-    <string name="push_event_alarm_title">的新消息</string>
-    <string name="delete_confirm">确认删除吗？</string>
-    <string name="alarm_message_del_success_txt">删除成功</string>
-    <string name="edit_txt">编辑</string>
-    <string name="tab_more">更多</string>
-    <string name="alarm_message_check_fail">消息标记失败</string>
-    <string name="alarm_message_check_fail_network_exception">消息标记失败，请检查您的网络</string>
-    <string name="realplay">实时视频</string>
-    <string name="from">来自</string>
-    <string name="add_camera_fail_server_exception">操作失败</string>
-    <string name="auto_wifi_device_added_already">该设备已被添加</string>
-    <string name="network_exception">网络不给力</string>
-    <string name="add_device_failed_not_online">Wi-Fi配置成功、绑定账号失败，请重试</string>
-    <string name="ez_add_device_failed_not_online">设备不在线</string>
-    <string name="verify_code_error">验证码错误，请核对</string>
-    <string name="auto_wifi_device_not_exist">绑定账号失败，设备不存在</string>
-    <string name="auto_wifi_device_added_by_others">设备已被其他人添加</string>
-    <string name="added_camera_psw_fail_title_txt">您输入的密码不正确，请重新输入</string>
-    <string name="added_camera_verycode_fail_title_txt">您输入的验证码不正确，请重新输入</string>
-    <string name="device_so_timeout">设备响应超时，请检查您的网络</string>
-    <string name="device_no_out_limit">设备添加数目已达上限</string>
-    <string name="query_camera_fail_not_exit">设备未注册，请检查您的设备网络</string>
-    <string name="calendar_setting_error">请先将日期设置到2012/01/01之后</string>
-    <string name="already_saved_to_volume">已保存至相册</string>
-    <string name="tip_heard_voice">请将设备插上电后等待大约30秒，直到设备启动完成</string>
-    <string name="autowifi_heard_voice">设备已启动好，且是第一次配置网络</string>
-    <string name="autowifi_not_heard_voice">这台设备以前配过网络</string>
-    <string name="ez_auto_wifi_line_connect">使用有线连接</string>
-    <string name="ez_auto_wifi_connecting_failed">配置Wi-Fi失败，请重试或返回检查Wi-Fi密码是否正确</string>
-    <string name="ez_cloud_video">云录像</string>
-    <string name="ez_device_video">SD卡录像</string>
-    <string name="ez_no_remote_data">没有查询到云录像</string>
-    <string name="ez_no_remote_data_device">没有查询到本地录像</string>
-    <string name="ez_event_message">消息</string>
-    <string name="ez_event_message_detail">消息详情</string>
-    <string name="ez_check_all_message">设为已读</string>
-    <string name="ez_no_message">暂无消息</string>
-    <string name="ez_alarm_message_check_success">设为已读成功</string>
-    <string name="ez_serial_add_hint">设备机身上的9位序列号</string>
-    <string name="ez_scan_title_txt">扫描二维码</string>
-    <string name="ez_scan_cue_txt">设备二维码</string>
-    <string name="ez_device_name_hint">设备名称</string>
-    <string name="detail_modify_device_name_limit_tip">不超过%d个字符</string>
-    <string name="ez_modify_name">修改设备名</string>
-    <string name="detail_modify_fail">修改失败</string>
-    <string name="detail_modify_success">修改成功</string>
-    <string name="company_addr_is_empty">不能为空</string>
-    <string name="offline_warn_text">当前网络不可用，请检查您的网络</string>
-    <string name="ez_save">保存</string>
-    <string name="ez_32_api_test">v3.2接口测试</string>
-    <string name="ez_setting">设备设置</string>
-    <string name="ez_current_version">当前版本</string>
-    <string name="ez_latest_version">最新版本</string>
-    <string name="ez_settings_device_serial">序列号</string>
-    <string name="detail_safe_close_btn_tip">关闭后，视频与图片查看的安全级别将降低，确定要关闭？</string>
-    <string name="ez_please_input_sms_code">请输入短信验证码</string>
-    <string name="ez_dialog_btn_disable_video_encrypt">关闭视频加密</string>
-    <string name="interface_test_hint_input_serial">输入测试序列号</string>
-    <string name="interface_test_api">测试接口</string>
-    <string name="interface_test_openCloudPage">openCloudPage</string>
-    <string name="title_activity_ezupgrade_device">EZUpgradeDeviceActivity</string>
-    <string name="ez_device_upgrade">设备升级</string>
-    <string name="interface_test_show_limit_dialog">LimitStream Dialog</string>
-    <string name="interface_test_v33_api">测试v3.3接口</string>
 
 
     <!-- ************************************************   已翻译部分   ************************************************-->
     <string name="app_name">智能恒流阀</string>
-
-    <string name="homepage">主页</string>
-    <string name="product">产品</string>
-    <string name="message">消息</string>
-    <string name="help">帮助</string>
-    <string name="me">我的</string>
-
-    <string-array name="module_main">
-        <item>智慧水务平台</item>
-        <item>农业灌溉系统</item>
-        <item>机械表抄表</item>
-        <item>智能消火栓</item>
-        <item>智慧消防平台</item>
-        <item>智慧供热平台</item>
-        <item>备用模块</item>
-        <item>蓝牙工具</item>
-        <item>更多平台</item>
-    </string-array>
 
     <string name="input_phoneNumber">输入手机号</string>
     <string name="input_password">输入密码</string>
@@ -1149,33 +93,18 @@
     <string name="MainAccount">主账号设置</string>
     <string name="ConstantFlowValveAccount">恒流阀账号</string>
     <string name="BindSocialAccount">绑定社交账号</string>
-    <string name="PersonalizedSettings">个性化设置</string>
-    <string name="ShowLogoPage">显示引导页面</string>
-    <string name="ClearCache">缓存清理</string>
-    <string name="Calculating">正在计算</string>
-    <string name="Language">多语言</string>
     <string name="VersionAndShare">版本与分享</string>
     <string name="VersionView">版本查看</string>
     <string name="VersionUpdate">版本更新</string>
-    <string name="PreviewVersion">获取预览版本</string>
     <string name="Share">分享给好友</string>
-    <string name="FeedbackAndAdvice">反馈与建议</string>
     <string name="ContactUs">联系我们</string>
     <string name="Logout">退出登录</string>
-
-    <string name="feedback_history">历史反馈</string>
-    <string name="feedback_issue">问题反馈</string>
-    <string name="feedback_advice">功能建议</string>
-    <string name="feedback_new">新增反馈</string>
 
     <string name="ProfilePhoto">头像</string>
     <string name="Account">账户名</string>
     <string name="Nickname">昵称</string>
     <string name="ChangePassword">密码修改</string>
     <string name="UnitsAndPositions">单位和职务</string>
-    <string name="IdentityVerification">实名认证信息</string>
-    <string name="Certified">已认证</string>
-    <string name="InReview">审核中</string>
 
     <string name="camera_pop_camera">相机拍摄</string>
     <string name="camera_pop_album">从相册选取</string>
@@ -1193,77 +122,15 @@
     <string name="Position">职务</string>
     <string name="SaveInformation">保存信息</string>
 
-    <string name="CertificationAndAuthorized">实名认证与蓝牙授权</string>
-    <string name="AuthenticationStatus">实名认证状态：</string>
-    <string name="Uncertified">未认证</string>
-    <string name="BluetoothToolsAuthorized">蓝牙工具使用权限：</string>
-    <string name="Authorized">已授权</string>
-    <string name="Unauthorized">未授权</string>
-    <string name="Canceled">被取消</string>
-    <string name="FullName">姓名</string>
-    <string name="ReadAuthenticationProtocol">我已阅读并同意《实名认证协议》</string>
-    <string name="SubmitAuthenticationInformation">提交实名认证信息</string>
-    <string name="certificationInformation">认证信息</string>
-    <string name="CertificationName">姓名</string>
-    <string name="CertificationTime">时间</string>
-    <string name="Auditor">审核人</string>
-    <string name="NoInformation">暂无信息</string>
-    <string name="DescriptionOfCertification">有关实名认证的说明</string>
-    <string name="AuthenticationProtocol">实名认证协议</string>
-
-    <string name="CheckForUpdatesAfterLoggingIn">登录后检查版本更新</string>
-    <string name="NoUpdateInformation">未获取到更新信息</string>
-    <string name="NewVersionFound">发现新版本</string>
-    <string name="NoUpdates">无更新</string>
-    <string name="UpdateDisabled">已禁用所有更新</string>
-
-    <string name="ChooseLanguage">语言选择</string>
-    <string name="Save">保存</string>
-    <string name="lan_default">跟随系统</string>
-    <string name="lan_chinese">中文</string>
-    <string name="lan_en">English</string>
-    <string name="lan_ja">日本語</string>
-    <string name="lan_de">Deutsch</string>
-
-    <string name="str_choice_printer_command">请选择正确的打印机指令</string>
-    <string name="str_printer_conn_normal">打印机连接正常</string>
-    <string name="str_printer_out_of_paper">打印机缺纸</string>
-    <string name="str_printer_open_cover">打印机开盖</string>
-    <string name="str_printer_error">打印机出错</string>
-    <string name="str_state">状态：</string>
-    <string name="str_interface_undefine">接口：未设定</string>
-    <string name="str_select_printer_id">选中id为{0}的打印机</string>
-    <string name="bluetooth_is_not_enabled">蓝牙没有开启</string>
-
     <!--  *********************************************************  智慧水务平台  *********************************************************  -->
     <string name="EnterSearchContent">请输入搜索内容</string>
     <string name="RecentSearchRecord">最近搜索记录</string>
-    <string name="ProductionOfWater">生产制水</string>
-    <string name="MeterReadingManagement">集抄管理</string>
-    <string name="PipeNetworkGIS">管网GIS</string>
-    <string name="LatestData">末次数据</string>
-    <string name="HistoricalData">历史数据</string>
-    <string name="WaterStatistics">用水统计</string>
-    <string name="SearchSettings">查询设置</string>
-    <string name="SettingInstructions">设置说明</string>
-    <string name="UnitOfMeasurement">计量单位</string>
-    <string name="LatestDataQuerySettings">末次数据查询设置</string>
-    <string name="HistoricalDataQuerySettings">历史数据查询设置</string>
-    <string name="NominalDiameterRange">口径范围</string>
-    <string name="QueryMode">查询模式</string>
-    <string name="TimeRange">时间范围</string>
-    <string name="ItemsPerPage">每页条数</string>
-    <string name="TimeMode">日期选择模式</string>
-    <string name="DataDisplayMode">数据展示形式</string>
     <string name="days">天</string>
-    <string name="items">条</string>
     <string name="items_pages">0条/0页</string>
     <string name="ShowAdvancedFilter">显示高级筛选条件</string>
     <string name="HideAdvancedFilter">隐藏高级筛选条件</string>
     <string name="mode">模式</string>
-    <string name="Hierarchy">层级:</string>
     <string name="Number">序号</string>
-    <string name="MeterSN">水表编号</string>
     <string name="Username">用户名</string>
     <string name="TimeRange2">时间范围</string>
     <string name="DN">DN</string>
@@ -1276,24 +143,12 @@
     <string name="CollapseAll">收起条件</string>
     <string name="ExpandAll">展开条件</string>
     <string name="Search">查询</string>
-    <string name="EnterMeterId">请输入正确的表号</string>
-    <string name="EnterHydrantId">请输入消火栓编号</string>
     <string name="ReadMeterTime">抄表时间</string>
     <string name="CommitTime">上传时间</string>
-    <string name="TotalFlow">累计流量</string>
-    <string name="FlowRate">瞬时流速</string>
-    <string name="Pressure">压力</string>
     <string name="MeterStatus">表具状态</string>
     <string name="ValveStatus">阀门状态</string>
-    <string name="ReverseFlow">反向流量</string>
-    <string name="Name">名称</string>
-    <string name="Unit">单位</string>
     <string name="Page">页码</string>
     <string name="HierarchyAddress">层级地址</string>
-    <string name="SmartWaterSupply">智慧水务平台</string>
-    <string name="SmartHeatingPlatform">智慧供热平台</string>
-    <string name="ReadMechanicalMeter">机械表抄表</string>
-    <string name="AgriculturalIrrigationSystem">农业灌溉系统</string>
     <string name="InputServerHost">请输入域名或服务器IP地址</string>
     <string name="InputHttpPort">请输入Http端口号</string>
     <string name="InputSocketPort">请输入Socket端口号</string>
@@ -1326,271 +181,69 @@
     <string name="Community">小&#160;&#160;区</string>
     <string name="Building">楼&#160;&#160;栋</string>
     <string name="Unit2">单&#160;&#160;元</string>
-    <string name="MeterStatusCode">水表状态码查询</string>
-    <string name="status_code">状态码:</string>
-    <string name="enter_status_code">请输入水表状态码</string>
-    <string name="platinum_resistance_short_circuit">铂电阻短路</string>
-    <string name="platinum_resistance_circuit_breaker">铂电阻短路</string>
-    <string name="no_water">无水</string>
-    <string name="circuit_failure">芯片与GP2通信故障</string>
-    <string name="over_flow_rate">瞬时流速超量程</string>
-    <string name="low_voltage">电池电压低</string>
-    <string name="leakage">漏水</string>
-    <string name="water_flow_reversed">水流反向</string>
 
     <!-- 公共字符串 -->
-    <string name="all_supplement_model">里程补偿方式:</string>
-    <string name="all_coord_type">坐标类型:</string>
-    <string name="all_cancel">取消</string>
-    <string name="all_sure">确定</string>
-    <string name="all_fence_operate">围栏操作</string>
 
     <!-- 公共字符串 里程补偿选项 -->
-    <string name="no_supplement">不补充</string>
-    <string name="straight">直线距离</string>
-    <string name="driving">最短驾车路线</string>
-    <string name="riding">最短骑行路线</string>
-    <string name="walking">最短步行路线</string>
 
     <!-- 公共字符串 坐标类型 -->
-    <string name="bd09ll">百度经纬度坐标</string>
-    <string name="gcj02">国测局加密坐标</string>
 
     <!-- Activity标题名称-->
-    <string name="base_title">BaseActivity</string>
-    <string name="login_title">LoginActivity</string>
-    <string name="tracing_title">轨迹追踪</string>
-    <string name="tracing_options_title">追踪设置</string>
-    <string name="track_query_title">轨迹查询</string>
-    <string name="track_query_options_title">查询设置</string>
-    <string name="fence_title">地理围栏</string>
-    <string name="bos_title">图片服务</string>
-    <string name="cache_manage_title">缓存管理</string>
-    <string name="fag_title">常见问题</string>
 
 
     <!-- Activity说明 -->
-    <string name="tracing_desc">室内、外高精度连续追踪</string>
-    <string name="track_query_desc">查询被追踪者的历史轨迹</string>
-    <string name="fence_desc">本地、云端围栏双重监控</string>
-    <string name="bos_desc">上传、下载图片，生成水印图片</string>
-    <string name="cache_manage_desc">查询、删除缓存的轨迹信息</string>
-    <string name="faq_desc">状态码及问题反馈渠道说明</string>
 
     <!-- TracingOptionActivity 主选项名称 -->
-    <string name="tracing_option_interval">采集、打包频率(单位:秒):</string>
-    <string name="tracing_option_location_mode">定位模式:</string>
-    <string name="tracing_option_object_save">对象存储:</string>
 
     <!-- 定位模式子选项名称 -->
-    <string name="high_accuracy">高精度定位模式，GPS与网络综合定位</string>
-    <string name="battery_saving">低功耗定位模式，仅使用网络定位</string>
-    <string name="device_sensors">仅使用设备(GPS)定位</string>
 
     <!-- BOS存储开关子选项 -->
-    <string name="close_bos">关闭</string>
-    <string name="open_bos">开启</string>
 
     <!-- 采集打包子选项 -->
-    <string name="gather_interval">采集频率:</string>
-    <string name="pack_interval">打包频率:</string>
 
     <!-- 采集打包默认值 -->
-    <string name="gather_interval_hint">5</string>
-    <string name="pack_interval_hint">30</string>
 
     <!-- TrackQueryOptionsActivity主选项 -->
-    <string name="track_query_option_time">起止时间:</string>
-    <string name="track_query_option_process">纠偏与数据分析:</string>
-    <string name="track_query_option_radius_threshold">精度过滤(单位:米):</string>
-    <string name="track_query_option_transport_mode">交通方式:</string>
-    <string name="track_query_option_sort_type">排序规则:</string>
 
     <!-- 精度过滤子选项-->
-    <string name="radius_value">过滤值：</string>
-    <string name="radius_hint">0</string>
 
     <!-- 纠偏与数据分析子选项 -->
-    <string name="processed">纠偏</string>
-    <string name="denoise">去噪</string>
-    <string name="vacuate">抽稀</string>
-    <string name="mapmatch">绑路</string>
 
     <!-- 交通方式子选项 -->
-    <string name="driving_mode">驾车</string>
-    <string name="riding_mode">骑行</string>
-    <string name="walking_mode">步行</string>
 
     <!-- 排序规则子选项 -->
-    <string name="asc">升序</string>
-    <string name="desc">降序</string>
 
     <!-- Dialog标题 -->
-    <string name="trace_control_title">追踪控制</string>
-    <string name="track_analysis_title">轨迹分析</string>
-    <string name="track_analysis_speeding_title">超速详情</string>
-    <string name="track_analysis_breaking_title">急刹车详情</string>
-    <string name="track_analysis_accel_title">急变速详情</string>
-    <string name="track_analysis_steering_title">急转弯详情</string>
-    <string name="track_analysis_stay_title">停留点详情</string>
-    <string name="fence_setting_title">围栏设置</string>
-    <string name="fence_create_local_circle">创建本地圆形围栏</string>
-    <string name="fence_create_server_circle">创建服务端圆形围栏</string>
-    <string name="fence_create_polyline">创建多段线围栏</string>
-    <string name="fence_create_polygon">创建多边形围栏</string>
 
     <!-- 追踪控制子选项 -->
-    <string name="start_trace">开启服务</string>
-    <string name="stop_trace">停止服务</string>
-    <string name="start_gather">开启采集</string>
-    <string name="stop_gather">停止采集</string>
 
     <!-- 轨迹分析子选项 -->
-    <string name="speeding">超 速</string>
-    <string name="harsh_breaking">急刹车</string>
-    <string name="harsh_accel">急变速</string>
-    <string name="harsh_steering">急转弯</string>
-    <string name="stay_point">停留点</string>
 
     <!-- 轨迹分析详情子选项 -->
-    <string name="loc_time">定位时间</string>
-    <string name="actual_speed">实际行驶速度：</string>
-    <string name="limit_speed">限定最高时速：</string>
-    <string name="acceleration">实际加速度：</string>
-    <string name="initial_speed_1">加速前时速：</string>
-    <string name="end_speed_1">加速后时速：</string>
-    <string name="initial_speed_2">刹车前时速：</string>
-    <string name="end_speed_2">刹车后时速：</string>
-    <string name="centripetal_acceleration">向心加速度：</string>
-    <string name="turn_type">转向类型：</string>
-    <string name="turn_speed">转向时速：</string>
-    <string name="stay_start_time">开始时间：</string>
-    <string name="stay_end_time">结束时间：</string>
-    <string name="stay_duration">停留时长：</string>
 
     <!-- 围栏设置子选项 -->
-    <string name="fence_type">围栏类型</string>
-    <string name="fence_shape">围栏形状</string>
-    <string name="fence_name">围栏名称</string>
-    <string name="vertexes_number">顶点数</string>
 
     <!-- 围栏类型子选项 -->
-    <string name="local_fence">本地(蓝色围栏)</string>
-    <string name="server_fence">服务端(红色围栏)</string>
 
     <!-- 围栏操作子选项-->
-    <string name="create_fence">创建</string>
-    <string name="fence_list">查询</string>
-    <string name="alarm_info">历史报警信息</string>
-    <string name="update_fence">更新</string>
-    <string name="delete_fence">删除</string>
 
     <!-- 围栏形状子选项 -->
-    <string name="circle_fence">圆形</string>
-    <string name="polygon_fence">多边形</string>
-    <string name="polyline_fence">多段线</string>
 
     <!-- 创建围栏子选项 -->
-    <string name="fence_denoise">去噪参数（单位：米）</string>
-    <string name="fence_radius">半径（单位：米）</string>
-    <string name="fence_offset">偏离距离（单位：米）</string>
-    <string name="alarm_condition">围栏报警条件</string>
 
     <!-- 创建围栏子选项默认值 -->
-    <string name="denoise_hint">0</string>
-    <string name="fence_radius_hint">1000</string>
-    <string name="offset_hint">200</string>
-    <string name="vertexes_number_hint">3</string>
-    <string name="fence_name_hint">myFence</string>
 
     <!-- 创建围栏提示信息 -->
-    <string name="fence_create_caption">
-        1、创建圆形围栏时，请点击地图相应位置作为围栏圆心；\n2、创建多边形或多段线围栏时，请按照设定的顶点数，依次点击地图作为每段折线的起点；\n3、本地围栏暂只支持圆形围栏
-    </string>
 
     <!-- 查询围栏提示信息-->
-    <string name="fence_operate_caption">圆形围栏只显示中心图标，
-        \n 多边形、多段线围栏只显示起点图标。
-        \n 请点击图标进行围栏操作!
-    </string>
 
     <!-- 报警通知标题 -->
-    <string name="alarm_push_title">百度鹰眼报警推送</string>
 
     <!-- BosActivity 选项 -->
-    <string name="put_object">上传对象(图片)</string>
-    <string name="get_object">获取对象(图片)</string>
-    <string name="generatePresigned_url">获取对象(图片)URL</string>
 
     <!-- 对象（图片）操作提示信息-->
-    <string name="not_granted_album_permission">未获取到读取相册的权限</string>
-    <string name="open_album_failed">打开相册失败</string>
-    <string name="not_select_picture">未获取到图片</string>
-    <string name="save_picture">图片下载成功,正在保存...</string>
 
     <!-- CacheManageActivity 选项 -->
-    <string name="query_cache_track">查询缓存轨迹信息</string>
-    <string name="clear_cache_track">清除缓存轨迹信息</string>
-
-    <string name="no_track_data">未查询到轨迹</string>
-
-    <string name="loc_failed">定位失败</string>
-    <string name="font_type">微软雅黑</string>
-
-    <string-array name="ModuleProductionOfWater">
-        <item>水源监测</item>
-        <item>压力监测</item>
-        <item>流量监测</item>
-        <item>水质监测</item>
-        <item>二供泵房</item>
-        <item>二供设备</item>
-        <item>视频监控</item>
-        <item>报警信息</item>
-    </string-array>
-
-    <string-array name="ModuleMeterReadingManagement">
-        <item>末次数据</item>
-        <item>历史数据</item>
-        <item>图表展示</item>
-        <item>用水统计</item>
-        <item>水表管理</item>
-        <item>采集设备</item>
-        <item>通讯服务</item>
-        <item>水表地图</item>
-        <item>日志查询</item>
-        <item>安装登记</item>
-        <item>维修登记</item>
-        <item>更换登记</item>
-        <item>异常信息</item>
-        <item>查询设置</item>
-    </string-array>
-
-    <string-array name="ModulePipeNetworkGIS">
-        <item>GIS地图</item>
-        <item>分区地图</item>
-        <item>坐标提交</item>
-        <item>分区流量</item>
-        <item>分区漏损</item>
-        <item>考核表分析</item>
-        <item>管道巡检</item>
-        <item>异常信息</item>
-    </string-array>
-
-    <string-array name="ModuleHydrant">
-        <item>实时状态</item>
-        <item>历史数据</item>
-        <item>用水统计</item>
-        <item>图表展示</item>
-        <item>设备管理</item>
-        <item>通讯服务</item>
-        <item>用户查询</item>
-        <item>地图展示</item>
-        <item>安装登记</item>
-        <item>维修登记</item>
-        <item>更换登记</item>
-        <item>日志查询</item>
-        <item>异常信息</item>
-    </string-array>
 
     <string-array name="spinner_content_filtering">
         <item>表号</item>
@@ -1629,135 +282,13 @@
         <item>未知</item>
     </string-array>
 
-    <array name="expand_titles">
-        <item>水&#160;&#160;表</item>
-        <item>热量表</item>
-        <item>消火栓</item>
-        <item>流量计</item>
-        <item>恒流阀</item>
-        <item>控制阀</item>
-        <item>通讯设备</item>
-        <item>软件服务</item>
-        <item>项目展示</item>
-        <item>其&#160;&#160;他</item>
-    </array>
-
-    <array name="button_operate_water_meter">
-        <item>普通开阀</item>
-        <item>普通关阀</item>
-        <item>抄表CJ188</item>
-        <item>最高权限开阀</item>
-        <item>最高权限关阀</item>
-        <item>抄表EN13757</item>
-        <item>抄剩余水量</item>
-        <item>校正时间</item>
-        <item>读取阀门状态</item>
-    </array>
-
-    <array name="button_operate_heat_meter">
-        <item>普通开阀</item>
-        <item>普通关阀</item>
-        <item>抄表CJ188</item>
-        <item>最高权限开阀</item>
-        <item>最高权限关阀</item>
-        <item>抄表EN13757</item>
-        <item>抄剩余水量</item>
-        <item>校正时间</item>
-        <item>读取阀门状态</item>
-    </array>
-
     <array name="button_operate_constant_flow_valve">
         <item>读阀门数据</item>
         <item>调整流速</item>
         <item>调整圈数</item>
         <item>回零</item>
         <item>流量点标定</item>
-        <item>设置休眠月份</item>
-        <item>设置上传间隔</item>
+        <item>设休眠月份</item>
+        <item>设上传间隔</item>
     </array>
-
-    <array name="button_operate_pump">
-        <item>刷新数据</item>
-        <item>压力设置</item>
-        <item>停机设置</item>
-        <item>开/关设备</item>
-    </array>
-
-
-    <string name="sdk_name">Baidu Navigation SDK Demo</string>
-    <string-array name="sdkapi_items">
-        <item>关键字搜索</item>
-        <item>周边搜索</item>
-        <item>手机语音识别</item>
-        <item>外部语音流识别</item>
-        <item>TTS</item>
-        <item>反GEO</item>
-        <item>线路规划demo1</item>
-        <item>线路规划demo2</item>
-        <item>离线数据管理</item>
-        <item>自定义图层</item>
-    </string-array>
-    <string name="search_start">搜索</string>
-    <string name="search_tips">离线检索需要使用"导航离线数据下载"demo下载数据之后才能正常使用！检索范围固定为广东省-深圳市，其他城市请修改demo源代码。</string>
-    <string name="antigeo_tips">离线反geo需要使用"导航离线数据下载"demo下载数据之后才能正常使用！</string>
-    <string name="asr_tips">语音识别需要使用"导航离线数据下载"demo下载广东数据之后才能正常使用！其他城市请修改demo源代码。</string>
-    <string name="suggest_start">提示</string>
-    <string name="search_hint">请输入关键字</string>
-    <string name="record_recording">\u2026正在录音\u2026</string>
-    <string name="record_recognizing">\u2026正在识别\u2026</string>
-    <string name="voiceinput">外部语音流识别</string>
-    <string name="voicenormal">手机语音流识别</string>
-    <string name="keyword_search">关键字搜索</string>
-    <string name="space_search">周边搜索</string>
-    <string name="search_result">搜索结果</string>
-    <string name="search_empty">识别结果为空</string>
-    <string name="search_fail">识别无效</string>
-    <string name="record_start">点击开启</string>
-
-    <!-- 离线数据管理 -->
-    <string name="title_route_guide_demo">1. GPS导航(RouteGuideDemo)</string>
-    <string name="title_route_plan_demo">2. 路线规划(RoutePlanDemo)</string>
-    <string name="title_cruiser">3. 电子狗(CruiserDemo)</string>
-    <string name="title_layer">4. 自定义地图图层(MapLayerDemo)</string>
-    <string name="title_offline_data">5. 导航离线数据下载(DownloadDemo)</string>
-    <string name="title_keyword_search">6. POI搜索-关键字(KeySearchDemo)</string>
-    <string name="title_nearby">7. POI搜索-分类(CatalogSearchDemo)</string>
-    <string name="title_degeo">8. 反GEO(ReverseGeoDemo)</string>
-    <string name="title_tts">9. TTS-Text To Speech(TTSDemo)</string>
-    <string name="title_asr">10. 语音识别(VoiceDemo)</string>
-    <string name="title_asr_input">11. 外部语音识别(VoiceInputDemo)</string>
-    <string name="title_key_verify_demo">12. 密钥验证(KeyVerifyDemo)</string>
-    <string name="title_charset_change_demo">13. 简体繁体转换(CharsetChangeDemo)</string>
-    <string name="online">在线</string>
-    <string name="offline">离线</string>
-
-    <!-- 繁体简体切换 -->
-    <string name="change_to_simplified">地图切换为简体</string>
-    <string name="change_to_traditional">地图切换为繁体</string>
-    <string name="change_to_simplified_tips">已切换为简体，请在地图图层页看效果</string>
-    <string name="change_to_traditional_tips">已切换为繁体，请在地图图层页看效果</string>
-
-
-    <string name="open_gps">请先打开GPS，提高定位准确度</string>
-    <string name="navigation">导航</string>
-    <string name="begin_navigation">开始导航</string>
-    <string name="my_position">我的位置</string>
-    <string name="input_start_place">输入起点</string>
-    <string name="input_destination">输入终点</string>
-    <string name="please_input_start_place">请输入起点</string>
-    <string name="please_input_destination">请输入终点</string>
-
-    <string name="inner_navi">内置导航</string>
-    <string name="baidu_navi">百度地图</string>
-    <string name="gaode_navi">高德地图</string>
-    <string name="bluetooth_tools_disconnected">当前未连接蓝牙工具</string>
-    <string name="bluetooth_deviceType">设备类型</string>
-    <string name="universal_settings">通用设定</string>
-    <string name="instructions">操作说明</string>
-    <string name="internal_data">内部数据</string>
-    <string name="lcd_display">液晶显示</string>
-    <string name="log_daily_monthly">日报月报</string>
-    <string name="ModifyRecord">修改记录</string>
-    <string name="inputOrReadMeterId">请输入或读取8位表号</string>
-    <string name="readMeterSN">读取表号</string>
 </resources>

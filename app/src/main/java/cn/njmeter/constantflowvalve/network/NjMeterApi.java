@@ -7,8 +7,9 @@ import cn.njmeter.constantflowvalve.bean.HeatMeterLastDataResult;
 import cn.njmeter.constantflowvalve.bean.VersionLog;
 import cn.njmeter.constantflowvalve.bean.NormalResult;
 import cn.njmeter.constantflowvalve.bean.ClientUser;
-import cn.njmeter.constantflowvalve.bean.WaterCompanyHierarchy;
-import cn.njmeter.constantflowvalve.bean.WaterMeterLoginResult;
+import cn.njmeter.constantflowvalve.bean.HeatCompanyHierarchy;
+import cn.njmeter.constantflowvalve.bean.ValveCommitInformation;
+import cn.njmeter.constantflowvalve.bean.ValveLoginResult;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
@@ -184,7 +185,7 @@ public interface NjMeterApi {
      */
     @FormUrlEncoded
     @POST("android/androidLogin.do")
-    Observable<WaterMeterLoginResult> loginWaterMeter(@FieldMap Map<String, String> params);
+    Observable<ValveLoginResult> loginWaterMeter(@FieldMap Map<String, String> params);
 
     /**
      * 查询层级关系
@@ -194,7 +195,7 @@ public interface NjMeterApi {
      */
     @FormUrlEncoded
     @POST("android/findLvInfo.do")
-    Observable<WaterCompanyHierarchy> searchAllHierarchy(@FieldMap Map<String, String> params);
+    Observable<HeatCompanyHierarchy> searchAllHierarchy(@FieldMap Map<String, String> params);
 
     /**
      * 查询已抄到数据的表具信息
@@ -215,5 +216,15 @@ public interface NjMeterApi {
     @FormUrlEncoded
     @POST("android/findNewLastReportDataWeichaodao.do")
     Observable<HeatMeterLastDataResult> searchHeatMeterLastReportWeiChao(@FieldMap Map<String, String> params);
+
+    /**
+     * 查询一只恒流阀指定日期区间的上传记录
+     *
+     * @param params 参数
+     * @return 返回值
+     */
+    @FormUrlEncoded
+    @POST("android/findNewOneMeterReportData.do")
+    Observable<ValveCommitInformation> searchMeterCommitDataInformation(@FieldMap Map<String, String> params);
 
 }

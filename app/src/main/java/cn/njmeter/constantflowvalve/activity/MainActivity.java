@@ -1,7 +1,9 @@
 package cn.njmeter.constantflowvalve.activity;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
@@ -24,6 +27,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -48,12 +52,12 @@ import cn.njmeter.constantflowvalve.BuildConfig;
 import cn.njmeter.constantflowvalve.ConstantFlowValveApplication;
 import cn.njmeter.constantflowvalve.R;
 import cn.njmeter.constantflowvalve.adapter.FilterConditionAdapter;
-import cn.njmeter.constantflowvalve.adapter.HeatMeterLastReportAdapter;
+import cn.njmeter.constantflowvalve.adapter.ValveLastReportAdapter;
 import cn.njmeter.constantflowvalve.adapter.TagAdapter;
 import cn.njmeter.constantflowvalve.bean.FilterCondition;
 import cn.njmeter.constantflowvalve.bean.HeatMeterLastData;
 import cn.njmeter.constantflowvalve.bean.HeatMeterLastDataResult;
-import cn.njmeter.constantflowvalve.bean.WaterMeterLoginResult;
+import cn.njmeter.constantflowvalve.bean.ValveLoginResult;
 import cn.njmeter.constantflowvalve.constant.ApkInfo;
 import cn.njmeter.constantflowvalve.constant.Constants;
 import cn.njmeter.constantflowvalve.constant.NetWork;
@@ -79,6 +83,7 @@ import cn.njmeter.constantflowvalve.widget.ChooseMeterSizeDialog;
 import cn.njmeter.constantflowvalve.widget.DownLoadDialog;
 import cn.njmeter.constantflowvalve.widget.DownloadProgressBar;
 import cn.njmeter.constantflowvalve.widget.MarqueeTextView;
+import cn.njmeter.constantflowvalve.widget.MyProgressBar;
 import cn.njmeter.constantflowvalve.widget.ReDownloadWarningDialog;
 import cn.njmeter.constantflowvalve.widget.SegmentControlView;
 import cn.njmeter.constantflowvalve.widget.UpgradeVersionDialog;
@@ -104,10 +109,10 @@ public class MainActivity extends BaseActivity {
     private Button btnExit;
     private String versionType, latestVersionName, versionFileName, latestVersionMD5, latestVersionLog, apkDownloadPath;
     private int myVersionCode, latestVersionCode;
-    private DownloadProgressBar downloadProgressBar;
+    private MyProgressBar downloadProgressBar;
     private TextView tvUpdateLog, tvCompletedSize, tvTotalSize;
     private float apkSize, completedSize;
-    private WaterMeterLoginResult loginResult;
+    private ValveLoginResult loginResult;
     private SegmentControlView scvSearchMode;
     private TextView tvShowAdvancedFilter, tvSizeRange, tvCurrentHierarchy, tvMountPage;
     private Button tvExpandAllFilter;
@@ -120,15 +125,19 @@ public class MainActivity extends BaseActivity {
     private String fieldName, fieldValue;
     private ExpandableListView lvHeatMeterLast;
     private FilterConditionAdapter filterConditionAdapter;
-    private HeatMeterLastReportAdapter waterMeterLastReportAdapter;
+    private ValveLastReportAdapter waterMeterLastReportAdapter;
     private int pageSize, totalPage, currentPage;
     private int itemContentFiltering, itemComparisonOperators, itemValueFiltering;
     private List<String> spinnerContentFiltering, spinnerComparisonOperators, spinnerMeterStatus, spinnerValveStatus;
     private FlowTagLayout fltComparisonOperators, fltValueFiltering;
     private TagAdapter<String> contentFilteringAdapter, comparisonOperatorsAdapter, valueFilteringAdapter;
     private final int MODIFY = 1, ADD = 2, maxDecimalDigits = 2;
-    public final int SEARCH_MODE_NORMAL = 0, SEARCH_MODE_CHANGE_SEGMENT = 1, SEARCH_MODE_LAST = 2, SEARCH_MODE_NEXT = 3;
+    private final int SEARCH_MODE_NORMAL = 0, SEARCH_MODE_CHANGE_SEGMENT = 1, SEARCH_MODE_LAST = 2, SEARCH_MODE_NEXT = 3;
     private static final int REQUEST_CODE_CHOOSE_COMPANY = 1000, REQUEST_CODE_NOTIFICATION_SETTINGS = 1001;
+    private boolean valveAccountCorrect = false;
+    private boolean isAdminAccount = true;
+    private LoginReceiver loginReceiver;
+    private ImageView ivRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,6 +150,9 @@ public class MainActivity extends BaseActivity {
         ViewGroup.LayoutParams params = navigation.getLayoutParams();
         params.width = mWidth * 4 / 5;
         navigation.setLayoutParams(params);
+
+        ivRight = findViewById(R.id.iv_right);
+        ivRight.setOnClickListener(onClickListener);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         llMain = findViewById(R.id.ll_main);
@@ -244,15 +256,15 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        fieldName = (String) SharedPreferencesUtils.getInstance().getData(getString(R.string.fieldName), "");
-        fieldValue = String.valueOf((int) SharedPreferencesUtils.getInstance().getData(getString(R.string.fieldValue), -1));
-
         //显示默认查询设置
         initDefaultData();
 
         //清除fieldName和fieldValue
         SharedPreferencesUtils.getInstance().clearData(getString(R.string.fieldName));
         SharedPreferencesUtils.getInstance().clearData(getString(R.string.fieldValue));
+
+        loginReceiver = new LoginReceiver();
+        registerReceiver(loginReceiver, new IntentFilter("login"));
 
         login();
     }
@@ -324,13 +336,39 @@ public class MainActivity extends BaseActivity {
         super.onResume();
         //显示默认查询设置
         initDefaultData();
+        initPage();
         showOrHideNotification();
+    }
+
+    public class LoginReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            fieldName = "";
+            fieldValue = "";
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
+            login();
+        }
     }
 
     private View.OnClickListener onClickListener = (view) -> {
         ClientUser.Account account = ConstantFlowValveApplication.getInstance().getAccount();
         Intent intent;
         switch (view.getId()) {
+            case R.id.iv_right:
+                if (!ConstantFlowValveApplication.loginSuccess) {
+                    openActivity(LoginRegisterActivity.class);
+                    return;
+                }
+                if (!valveAccountCorrect) {
+                    showToast("请检查恒流阀账号");
+                    return;
+                }
+                intent = new Intent(MainActivity.this, ChooseCompanyActivity.class);
+                intent.putExtra(getString(R.string.waterCompanyName), GsonUtils.convertJSON(loginResult));
+                startActivityForResult(intent, REQUEST_CODE_CHOOSE_COMPANY);
+                break;
             case R.id.ll_notification:
                 intent = new Intent();
                 intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
@@ -391,7 +429,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_search:
                 //查询数据
-                searchWaterMeter(SEARCH_MODE_NORMAL);
+                if (checkAccount()) {
+                    searchWaterMeter(SEARCH_MODE_NORMAL);
+                }
                 break;
             case R.id.tv_current_hierarchy:
                 //层级选择
@@ -456,6 +496,24 @@ public class MainActivity extends BaseActivity {
                 break;
         }
     };
+
+    private boolean checkAccount() {
+        if (!ConstantFlowValveApplication.loginSuccess) {
+            openActivity(LoginRegisterActivity.class);
+            return false;
+        }
+        if (!valveAccountCorrect) {
+            showToast("请检查恒流阀账号");
+            return false;
+        }
+        if (isAdminAccount) {
+            Intent intent = new Intent(MainActivity.this, ChooseCompanyActivity.class);
+            intent.putExtra(getString(R.string.waterCompanyName), GsonUtils.convertJSON(loginResult));
+            startActivityForResult(intent, REQUEST_CODE_CHOOSE_COMPANY);
+            return false;
+        }
+        return true;
+    }
 
     private DrawerLayout.DrawerListener drawerListener = new DrawerLayout.DrawerListener() {
         @Override
@@ -579,13 +637,6 @@ public class MainActivity extends BaseActivity {
      * 初始化页面（根据是否已登录）
      */
     private void initPage() {
-        if (heatMeterLastDataList != null) {
-            heatMeterLastDataList.clear();
-            waterMeterLastReportAdapter = new HeatMeterLastReportAdapter(MainActivity.this, heatMeterLastDataList, pageSize, currentPage - 1);
-            lvHeatMeterLast.setAdapter(waterMeterLastReportAdapter);
-        }
-        etTimeRange.clearFocus();
-        etCurrentPage.clearFocus();
         if (!ConstantFlowValveApplication.loginSuccess) {
             tvNickName.setText("暂无昵称");
             tvCompanyName.setText("未登录");
@@ -624,8 +675,8 @@ public class MainActivity extends BaseActivity {
         energyManagerParams.put("loginName", mUsername);
         energyManagerParams.put("password", mPassword);
         energyManagerParams.put("type", "heat");
-        Observable<WaterMeterLoginResult> waterMeterLoginResultObservable = NetClient.getInstances(NetClient.getBaseUrl(serverHost, httpPort, serviceName)).getNjMeterApi().loginWaterMeter(energyManagerParams);
-        waterMeterLoginResultObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new NetworkSubscriber<WaterMeterLoginResult>(mContext, getClass().getSimpleName()) {
+        Observable<ValveLoginResult> waterMeterLoginResultObservable = NetClient.getInstances(NetClient.getBaseUrl(serverHost, httpPort, serviceName)).getNjMeterApi().loginWaterMeter(energyManagerParams);
+        waterMeterLoginResultObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new NetworkSubscriber<ValveLoginResult>(mContext, getClass().getSimpleName()) {
 
             @Override
             public void onStart() {
@@ -636,6 +687,8 @@ public class MainActivity extends BaseActivity {
                     if (!isUnsubscribed()) {
                         unsubscribe();
                     }
+                } else {
+                    showLoadingDialog(mContext, "登陆中", true);
                 }
             }
 
@@ -646,47 +699,50 @@ public class MainActivity extends BaseActivity {
             }
 
             @Override
-            public void onNext(WaterMeterLoginResult waterMeterLoginResult) {
+            public void onNext(ValveLoginResult valveLoginResult) {
                 cancelDialog();
-                if (waterMeterLoginResult == null) {
+                if (valveLoginResult == null) {
                     showToast("请求失败，返回值异常");
                 } else {
-                    String result = waterMeterLoginResult.getResult();
+                    String result = valveLoginResult.getResult();
                     if (result.equals(Constants.SUCCESS)) {
                         Intent intent;
-                        switch (waterMeterLoginResult.getPrivilege()) {
+                        valveAccountCorrect = true;
+                        switch (valveLoginResult.getPrivilege()) {
                             case "管理员":
-                                loginResult = waterMeterLoginResult;
+                                isAdminAccount = true;
+                                ivRight.setVisibility(View.VISIBLE);
+                                loginResult = valveLoginResult;
                                 intent = new Intent(MainActivity.this, ChooseCompanyActivity.class);
                                 intent.putExtra(getString(R.string.waterCompanyName), GsonUtils.convertJSON(loginResult));
                                 startActivityForResult(intent, REQUEST_CODE_CHOOSE_COMPANY);
                                 break;
                             case "普通":
                                 //对象中拿到集合
-                                WaterMeterLoginResult.Data data = waterMeterLoginResult.getData().get(0);
+                                isAdminAccount = false;
+                                ivRight.setVisibility(View.GONE);
+                                ValveLoginResult.Data data = valveLoginResult.getData().get(0);
                                 //判断普通管理员的最高权限
                                 int supplierId = data.getSupplierId();
                                 int exchangStationId = data.getExchangStationId();
                                 int villageId = data.getVillageId();
                                 int buildingId = data.getBuildingId();
                                 int entranceId = data.getEntranceId();
-                                String fieldName = Constants.EMPTY;
-                                int fieldValue = -1;
                                 if (entranceId != -1) {
                                     fieldName = "entranceId";
-                                    fieldValue = entranceId;
+                                    fieldValue = String.valueOf(entranceId);
                                 } else if (buildingId != -1) {
                                     fieldName = "buildingId";
-                                    fieldValue = buildingId;
+                                    fieldValue = String.valueOf(buildingId);
                                 } else if (villageId != -1) {
                                     fieldName = "villageId";
-                                    fieldValue = villageId;
+                                    fieldValue = String.valueOf(villageId);
                                 } else if (exchangStationId != -1) {
                                     fieldName = "exchangStationId";
-                                    fieldValue = exchangStationId;
+                                    fieldValue = String.valueOf(exchangStationId);
                                 } else if (supplierId != -1) {
                                     fieldName = "supplierId";
-                                    fieldValue = supplierId;
+                                    fieldValue = String.valueOf(supplierId);
                                 }
 
                                 SharedPreferencesUtils.getInstance().saveData(getString(R.string.fieldName), fieldName);
@@ -699,7 +755,9 @@ public class MainActivity extends BaseActivity {
                                 break;
                         }
                     } else {
-                        showToast(waterMeterLoginResult.getMsg());
+                        valveAccountCorrect = false;
+                        isAdminAccount = false;
+                        showToast(valveLoginResult.getMsg());
                     }
                 }
             }
@@ -859,7 +917,7 @@ public class MainActivity extends BaseActivity {
             tvTotalSize = progressDialog.findViewById(R.id.tv_totalSize);
             progressDialog.setCancelable(false);
             progressDialog.show();
-            NetClient.downloadFileProgress(apkDownloadPath, (currentBytes, contentLength, done) -> {
+            NetClient.downloadFileProgress((currentBytes, contentLength, done) -> {
                 //获取到文件的大小
                 apkSize = MathUtils.formatFloat((float) contentLength / 1024f / 1024f, 2);
                 tvTotalSize.setText(String.format(getString(R.string.file_size_m), String.valueOf(apkSize)));
@@ -1484,8 +1542,6 @@ public class MainActivity extends BaseActivity {
      * 查询水表的方法
      */
     public void searchWaterMeter(int searchMode) {
-        //先清空页面
-        initPage();
         String timeRange = etTimeRange.getText().toString().trim();
         if (TextUtils.isEmpty(timeRange)) {
             timeRange = (String) SharedPreferencesUtils.getInstance().getData("timeRange", SmartWaterSupply.DATA_SEARCH_TIME_RANGE);
@@ -1605,7 +1661,7 @@ public class MainActivity extends BaseActivity {
                         } else {
                             //否则显示列表内容
                             heatMeterLastDataList = heatMeterLastDataResult.getData();
-                            waterMeterLastReportAdapter = new HeatMeterLastReportAdapter(MainActivity.this, heatMeterLastDataList, pageSize, currentPage - 1);
+                            waterMeterLastReportAdapter = new ValveLastReportAdapter(MainActivity.this, heatMeterLastDataList, pageSize, currentPage - 1);
                             lvHeatMeterLast.setAdapter(waterMeterLastReportAdapter);
                             changeListVisibility(true, false);
                         }
@@ -1623,6 +1679,10 @@ public class MainActivity extends BaseActivity {
         switch (requestCode) {
             case REQUEST_CODE_CHOOSE_COMPANY:
                 if (RESULT_OK == resultCode) {
+                    isAdminAccount = false;
+                    valveAccountCorrect = true;
+                    fieldName = (String) SharedPreferencesUtils.getInstance().getData(getString(R.string.fieldName), "");
+                    fieldValue = String.valueOf((int) SharedPreferencesUtils.getInstance().getData(getString(R.string.fieldValue), -1));
                     searchWaterMeter(SEARCH_MODE_NORMAL);
                 }
                 break;
@@ -1673,10 +1733,28 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return false;
+            }
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         SharedPreferencesUtils.getInstance().clearData("MeterSize_Min");
         SharedPreferencesUtils.getInstance().clearData("MeterSize_Max");
+        if (loginReceiver != null) {
+            try {
+                unregisterReceiver(loginReceiver);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }

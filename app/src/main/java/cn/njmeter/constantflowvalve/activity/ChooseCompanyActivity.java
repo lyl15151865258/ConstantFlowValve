@@ -23,7 +23,7 @@ import cn.njmeter.constantflowvalve.ConstantFlowValveApplication;
 import cn.njmeter.constantflowvalve.R;
 import cn.njmeter.constantflowvalve.adapter.TagAdapter;
 import cn.njmeter.constantflowvalve.adapter.WaterCompanyAdapter;
-import cn.njmeter.constantflowvalve.bean.WaterMeterLoginResult;
+import cn.njmeter.constantflowvalve.bean.ValveLoginResult;
 import cn.njmeter.constantflowvalve.constant.Constants;
 import cn.njmeter.constantflowvalve.sqlite.DbHelper;
 import cn.njmeter.constantflowvalve.sqlite.table.Table;
@@ -48,7 +48,7 @@ import cn.njmeter.constantflowvalve.widget.flowtaglayout.OnTagLongClickListener;
 
 public class ChooseCompanyActivity extends BaseActivity {
 
-    private List<WaterMeterLoginResult.Data> dataList, platformsNameList;
+    private List<ValveLoginResult.Data> dataList, platformsNameList;
     private List<String> historyList = new ArrayList<>();
     private EditText etSearch;
     private WaterCompanyAdapter waterCompanyAdapter;
@@ -69,9 +69,9 @@ public class ChooseCompanyActivity extends BaseActivity {
         httpPort = ConstantFlowValveApplication.getInstance().getAccount().getHttp_Port_CS();
         JsonObject jsonObject = new JsonParser().parse(getIntent().getStringExtra(getString(R.string.waterCompanyName))).getAsJsonObject();
         //Gson直接解析成对象
-        WaterMeterLoginResult waterMeterLoginResult = new Gson().fromJson(jsonObject, WaterMeterLoginResult.class);
+        ValveLoginResult valveLoginResult = new Gson().fromJson(jsonObject, ValveLoginResult.class);
         //对象中拿到集合
-        dataList = waterMeterLoginResult.getData();
+        dataList = valveLoginResult.getData();
         platformsNameList = new ArrayList<>();
         platformsNameList.addAll(dataList);
         historyAdapter = new TagAdapter<>(this);
@@ -104,7 +104,7 @@ public class ChooseCompanyActivity extends BaseActivity {
     private AdapterView.OnItemClickListener onItemClickListener = (parent, view, position, id) -> {
         switch (parent.getId()) {
             case R.id.listView_platform:
-                WaterMeterLoginResult.Data data = (WaterMeterLoginResult.Data) parent.getItemAtPosition(position);
+                ValveLoginResult.Data data = (ValveLoginResult.Data) parent.getItemAtPosition(position);
                 //判断普通管理员的最高权限
                 int supplierId = data.getSupplierId();
                 int exchangStationId = data.getExchangStationId();

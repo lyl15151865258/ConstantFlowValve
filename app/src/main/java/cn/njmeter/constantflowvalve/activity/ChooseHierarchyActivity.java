@@ -26,7 +26,7 @@ import cn.njmeter.constantflowvalve.adapter.HierarchyAdapter;
 import cn.njmeter.constantflowvalve.adapter.TagAdapter;
 import cn.njmeter.constantflowvalve.constant.Constants;
 import cn.njmeter.constantflowvalve.bean.Hierarchy;
-import cn.njmeter.constantflowvalve.bean.WaterCompanyHierarchy;
+import cn.njmeter.constantflowvalve.bean.HeatCompanyHierarchy;
 import cn.njmeter.constantflowvalve.network.ExceptionHandle;
 import cn.njmeter.constantflowvalve.network.NetClient;
 import cn.njmeter.constantflowvalve.network.NetworkSubscriber;
@@ -55,7 +55,7 @@ import rx.schedulers.Schedulers;
 public class ChooseHierarchyActivity extends BaseActivity {
 
     private Context mContext;
-    private List<WaterCompanyHierarchy.Data> companyHierarchyList = new ArrayList<>();
+    private List<HeatCompanyHierarchy.Data> companyHierarchyList = new ArrayList<>();
     private List<Hierarchy> hierarchyList = new ArrayList<>();
     private List<String> historyList = new ArrayList<>();
     private ListView lvHierarchy;
@@ -125,7 +125,7 @@ public class ChooseHierarchyActivity extends BaseActivity {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             currentHierarchy = (Hierarchy) parent.getItemAtPosition(position);
             int type = currentHierarchy.getType();
-            WaterCompanyHierarchy.Data companyHierarchy = (new WaterCompanyHierarchy()).new Data();
+            HeatCompanyHierarchy.Data companyHierarchy = (new HeatCompanyHierarchy()).new Data();
             switch (type) {
                 case Hierarchy.EXCHANGE_STATION:
                     //如果点击的是分公司层级
@@ -196,8 +196,8 @@ public class ChooseHierarchyActivity extends BaseActivity {
         Map<String, String> params = new HashMap<>(2);
         params.put("fieldName", fieldName);
         params.put("fieldValue", String.valueOf(fieldValue));
-        Observable<WaterCompanyHierarchy> waterCompanyHierarchyObservable = NetClient.getInstances(NetClient.getBaseUrl(serverHost, httpPort, serviceName)).getNjMeterApi().searchAllHierarchy(params);
-        waterCompanyHierarchyObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new NetworkSubscriber<WaterCompanyHierarchy>(mContext, getClass().getSimpleName()) {
+        Observable<HeatCompanyHierarchy> waterCompanyHierarchyObservable = NetClient.getInstances(NetClient.getBaseUrl(serverHost, httpPort, serviceName)).getNjMeterApi().searchAllHierarchy(params);
+        waterCompanyHierarchyObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new NetworkSubscriber<HeatCompanyHierarchy>(mContext, getClass().getSimpleName()) {
 
             @Override
             public void onStart() {
@@ -220,13 +220,13 @@ public class ChooseHierarchyActivity extends BaseActivity {
             }
 
             @Override
-            public void onNext(WaterCompanyHierarchy waterCompanyHierarchy) {
+            public void onNext(HeatCompanyHierarchy heatCompanyHierarchy) {
                 cancelDialog();
-                if (waterCompanyHierarchy == null) {
+                if (heatCompanyHierarchy == null) {
                     showToast("查询失败，返回值异常");
                 } else {
-                    if (Constants.SUCCESS.equals(waterCompanyHierarchy.getResult())) {
-                        companyHierarchyList = waterCompanyHierarchy.getData();
+                    if (Constants.SUCCESS.equals(heatCompanyHierarchy.getResult())) {
+                        companyHierarchyList = heatCompanyHierarchy.getData();
                         if (companyHierarchyList.size() != 0) {
                             showTextAndList();
                         } else {
@@ -385,7 +385,7 @@ public class ChooseHierarchyActivity extends BaseActivity {
                 int id;
                 if (currentHierarchy != null) {
                     int type = currentHierarchy.getType();
-                    WaterCompanyHierarchy.Data companyHierarchy = (new WaterCompanyHierarchy()).new Data();
+                    HeatCompanyHierarchy.Data companyHierarchy = (new HeatCompanyHierarchy()).new Data();
                     id = currentHierarchy.getId();
                     switch (type) {
                         case Hierarchy.EXCHANGE_STATION:
@@ -529,7 +529,7 @@ public class ChooseHierarchyActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.tv_exchangeStation:
                 for (int i = 0; i < companyHierarchyList.size(); i++) {
-                    WaterCompanyHierarchy.Data companyHierarchy = companyHierarchyList.get(i);
+                    HeatCompanyHierarchy.Data companyHierarchy = companyHierarchyList.get(i);
                     Hierarchy hierarchy = new Hierarchy();
                     hierarchy.setId(companyHierarchy.getExchangStationId());
                     hierarchy.setType(Hierarchy.EXCHANGE_STATION);
@@ -541,7 +541,7 @@ public class ChooseHierarchyActivity extends BaseActivity {
                 break;
             case R.id.tv_village:
                 for (int i = 0; i < companyHierarchyList.size(); i++) {
-                    WaterCompanyHierarchy.Data companyHierarchy = companyHierarchyList.get(i);
+                    HeatCompanyHierarchy.Data companyHierarchy = companyHierarchyList.get(i);
                     Hierarchy hierarchy = new Hierarchy();
                     hierarchy.setId(companyHierarchy.getVillageId());
                     hierarchy.setType(Hierarchy.VILLAGE);
@@ -559,7 +559,7 @@ public class ChooseHierarchyActivity extends BaseActivity {
                 break;
             case R.id.tv_building:
                 for (int i = 0; i < companyHierarchyList.size(); i++) {
-                    WaterCompanyHierarchy.Data companyHierarchy = companyHierarchyList.get(i);
+                    HeatCompanyHierarchy.Data companyHierarchy = companyHierarchyList.get(i);
                     Hierarchy hierarchy = new Hierarchy();
                     hierarchy.setId(companyHierarchy.getBuildingId());
                     hierarchy.setType(Hierarchy.BUILDING);
@@ -581,7 +581,7 @@ public class ChooseHierarchyActivity extends BaseActivity {
                 break;
             case R.id.tv_entrance:
                 for (int i = 0; i < companyHierarchyList.size(); i++) {
-                    WaterCompanyHierarchy.Data companyHierarchy = companyHierarchyList.get(i);
+                    HeatCompanyHierarchy.Data companyHierarchy = companyHierarchyList.get(i);
                     Hierarchy hierarchy = new Hierarchy();
                     hierarchy.setId(companyHierarchy.getEntranceId());
                     hierarchy.setType(Hierarchy.ENTRANCE);

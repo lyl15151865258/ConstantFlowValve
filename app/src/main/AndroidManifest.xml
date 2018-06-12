@@ -31,7 +31,7 @@
 
         <activity
             android:name=".activity.SplashActivity"
-            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,6 +61,18 @@
         <!-- 主界面 -->
         <activity
             android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 历史数据 -->
+        <activity
+            android:name=".activity.HeatMeterHistoryDataActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 恒流阀操作 -->
+        <activity
+            android:name=".activity.CommunicationServiceActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
@@ -135,6 +147,12 @@
             android:name=".activity.SocialAccountsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
+
+        <!-- Socket通信服务 -->
+        <service
+            android:name=".service.SocketService"
+            android:enabled="true"
+            android:exported="false" />
 
     </application>
 

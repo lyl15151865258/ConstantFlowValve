@@ -175,11 +175,10 @@ public class NetClient {
     /**
      * Retrofit带进度的下载方法
      *
-     * @param filePath 文件路径
      * @param listener 进度监听器
      * @param callback 请求结果回调
      */
-    public static void downloadFileProgress(String filePath, ProgressListener listener, Callback<ResponseBody> callback) {
+    public static void downloadFileProgress(ProgressListener listener, Callback<ResponseBody> callback) {
         OkHttpClient client = okHttpClient.newBuilder().addNetworkInterceptor((chain) -> {
             okhttp3.Response response = chain.proceed(chain.request());
             return response.newBuilder().body(new ProgressResponseBody(response.body(), listener)).build();

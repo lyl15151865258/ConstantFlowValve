@@ -44,6 +44,17 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20" />
 
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_6"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_toolbar_menu_open"
+                android:visibility="gone" />
+
         </RelativeLayout>
 
         <LinearLayout
@@ -471,7 +482,6 @@
                 android:background="@color/gray_1" />
 
             <LinearLayout
-                android:id="@+id/ll_water_meter_last"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"

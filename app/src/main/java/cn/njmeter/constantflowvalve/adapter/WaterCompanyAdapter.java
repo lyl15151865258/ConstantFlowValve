@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import cn.njmeter.constantflowvalve.R;
-import cn.njmeter.constantflowvalve.bean.WaterMeterLoginResult;
+import cn.njmeter.constantflowvalve.bean.ValveLoginResult;
 
 /**
  * 水表平台展示水司的适配器
@@ -23,10 +23,10 @@ import cn.njmeter.constantflowvalve.bean.WaterMeterLoginResult;
 
 public class WaterCompanyAdapter extends BaseAdapter {
 
-    private List<WaterMeterLoginResult.Data> list;
+    private List<ValveLoginResult.Data> list;
     private Context context;
 
-    public WaterCompanyAdapter(Context c, List<WaterMeterLoginResult.Data> lv) {
+    public WaterCompanyAdapter(Context c, List<ValveLoginResult.Data> lv) {
         context = c;
         list = lv;
     }
@@ -56,7 +56,7 @@ public class WaterCompanyAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        WaterMeterLoginResult.Data data = list.get(position);
+        ValveLoginResult.Data data = list.get(position);
         if (TextUtils.isEmpty(data.getSupplier())) {
             viewHolder.tvPlatform.setText("暂无信息");
         } else {
