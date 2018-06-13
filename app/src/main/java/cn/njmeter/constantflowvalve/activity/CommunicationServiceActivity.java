@@ -44,6 +44,7 @@ import cn.njmeter.constantflowvalve.constant.ProductType;
 import cn.njmeter.constantflowvalve.constant.SocketConstant;
 import cn.njmeter.constantflowvalve.network.bean.SocketPackage;
 import cn.njmeter.constantflowvalve.service.SocketService;
+import cn.njmeter.constantflowvalve.utils.ActivityController;
 import cn.njmeter.constantflowvalve.utils.DataAnalysisUtils;
 import cn.njmeter.constantflowvalve.utils.GsonUtils;
 import cn.njmeter.constantflowvalve.utils.MathUtils;
@@ -308,6 +309,9 @@ public class CommunicationServiceActivity extends BaseActivity {
 
     private View.OnClickListener onClickListener = (v) -> {
         switch (v.getId()) {
+            case R.id.iv_left:
+                ActivityController.finishActivity(this);
+                break;
             case R.id.iv_deleteImei:
                 imeiEdtTxt.setText("");
                 break;

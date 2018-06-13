@@ -88,7 +88,7 @@ public class HeatMeterHistoryDataActivity extends BaseActivity {
         viewSpace = findViewById(R.id.view_space);
 
         fieldName = (String) SharedPreferencesUtils.getInstance().getData(getString(R.string.fieldName), "");
-        fieldValue = (String) SharedPreferencesUtils.getInstance().getData(getString(R.string.fieldValue), "-1");
+        fieldValue = String.valueOf((int) SharedPreferencesUtils.getInstance().getData(getString(R.string.fieldValue), -1));
 
         findViewById(R.id.btn_search_meter).setOnClickListener(onClickListener);
         findViewById(R.id.iv_lastDay).setOnClickListener(onClickListener);
