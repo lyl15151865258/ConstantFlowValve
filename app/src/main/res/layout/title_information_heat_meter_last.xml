@@ -76,7 +76,7 @@
             android:paddingLeft="@dimen/dp_5"
             android:paddingRight="@dimen/dp_5"
             android:paddingTop="@dimen/dp_10"
-            android:text="累计热量"
+            android:text="累计当量"
             android:textStyle="bold" />
     </LinearLayout>
 

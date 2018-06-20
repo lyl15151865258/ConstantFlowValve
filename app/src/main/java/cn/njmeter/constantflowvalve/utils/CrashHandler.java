@@ -186,9 +186,9 @@ public class CrashHandler implements UncaughtExceptionHandler {
             String model = Build.MODEL;
             String fileName;
             if (ConstantFlowValveApplication.getInstance().getAccount() != null) {
-                fileName = "Njmeter-" + TimeUtils.getCurrentFormatDateTime() + "-" + model + "-" + ConstantFlowValveApplication.getInstance().getAccount().getLoginId() + ".txt";
+                fileName = "ConstantFlowValve-" + TimeUtils.getCurrentFormatDateTime() + "-" + model + "-" + ConstantFlowValveApplication.getInstance().getAccount().getLoginId() + ".txt";
             } else {
-                fileName = "Njmeter-" + TimeUtils.getCurrentFormatDateTime() + "-" + model + "-" + "00000000" + ".txt";
+                fileName = "ConstantFlowValve-" + TimeUtils.getCurrentFormatDateTime() + "-" + model + "-" + "00000000" + ".txt";
             }
             String path = getRoot();
             File dir = new File(path);

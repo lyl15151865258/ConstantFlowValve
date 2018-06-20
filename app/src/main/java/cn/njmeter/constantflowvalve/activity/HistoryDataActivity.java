@@ -44,7 +44,7 @@ import rx.schedulers.Schedulers;
  * @version 1.0
  */
 
-public class HeatMeterHistoryDataActivity extends BaseActivity {
+public class HistoryDataActivity extends BaseActivity {
 
     private Context mContext;
     private TextView tvDate, tvBeginTime, tvEndTime;

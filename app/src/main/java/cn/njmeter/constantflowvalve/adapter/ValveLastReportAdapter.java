@@ -14,7 +14,7 @@ import java.util.List;
 
 import cn.njmeter.constantflowvalve.R;
 import cn.njmeter.constantflowvalve.activity.CommunicationServiceActivity;
-import cn.njmeter.constantflowvalve.activity.HeatMeterHistoryDataActivity;
+import cn.njmeter.constantflowvalve.activity.HistoryDataActivity;
 import cn.njmeter.constantflowvalve.bean.HeatMeterLastData;
 
 /**
@@ -129,7 +129,7 @@ public class ValveLastReportAdapter extends BaseExpandableListAdapter {
 
         childViewHolder.btnHistoryData.setOnClickListener((view) -> {
             String meterId = data.getMeterId();
-            Intent intent = new Intent(appCompatActivity, HeatMeterHistoryDataActivity.class);
+            Intent intent = new Intent(appCompatActivity, HistoryDataActivity.class);
             intent.putExtra("meterId", meterId);
             appCompatActivity.startActivity(intent);
         });

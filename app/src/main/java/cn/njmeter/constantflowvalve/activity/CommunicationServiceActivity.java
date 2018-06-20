@@ -90,7 +90,7 @@ public class CommunicationServiceActivity extends BaseActivity {
         setContentView(R.layout.activity_communication);
         mContext = this;
         MyToolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.initToolBar(this, toolbar, "恒流阀操作", R.drawable.back_white, onClickListener);
+        toolbar.initToolBar(this, toolbar, "衡流阀操作", R.drawable.back_white, onClickListener);
         initView();
         executorService = new ThreadPoolExecutor(5, 10, 60, TimeUnit.SECONDS,
                 new SynchronousQueue<>(), (r) -> {

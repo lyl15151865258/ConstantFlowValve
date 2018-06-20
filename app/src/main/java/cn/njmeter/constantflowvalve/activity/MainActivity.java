@@ -435,8 +435,10 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.tv_current_hierarchy:
                 //层级选择
-                intent = new Intent(mContext, ChooseHierarchyActivity.class);
-                startActivityForResult(intent, 100);
+                if (checkAccount()) {
+                    intent = new Intent(mContext, ChooseHierarchyActivity.class);
+                    startActivityForResult(intent, 100);
+                }
                 break;
             case R.id.tv_size_range:
                 //修改口径范围

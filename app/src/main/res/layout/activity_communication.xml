@@ -110,7 +110,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="@dimen/dp_8"
-                android:text="恒流阀数据"
+                android:text="衡流阀数据"
                 android:textSize="@dimen/sp_16"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -445,7 +445,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:padding="@dimen/dp_5"
-                        android:text="水表状态"
+                        android:text="表具状态"
                         android:textStyle="bold" />
 
                     <View
@@ -512,7 +512,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:padding="@dimen/dp_5"
-                    android:text="水表时间"
+                    android:text="表具时间"
                     android:textStyle="bold" />
 
                 <View
