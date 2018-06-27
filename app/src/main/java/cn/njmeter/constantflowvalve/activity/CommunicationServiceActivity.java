@@ -183,8 +183,8 @@ public class CommunicationServiceActivity extends BaseActivity {
             switch (DataAnalysisUtils.txIsLegal(message, productProtocol, ssumheat, mbus, parameterprotocol)) {
                 case ProductType.CONSTANT_FLOW_VALVE_READ_PARAMETER:
                     //抄表
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "读取数据成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "读取数据成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "读取数据成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "读取数据成功");
                     meterIdTv.setText(productProtocol.getMeterID());
                     totalConsumptionTv.setText(MathUtils.getOriginNumber(productProtocol.getTotal()) + productProtocol.getTotalUnit());
                     flowRateTv.setText(StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
@@ -201,73 +201,73 @@ public class CommunicationServiceActivity extends BaseActivity {
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_TURNS:
                     //指定圈数
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "指定" + productProtocol.getQuanShu() + "圈设置成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "指定圈数成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "指定" + productProtocol.getQuanShu() + "圈设置成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "指定圈数成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_ADD_TURNS:
                     //增大圈数
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "增大" + productProtocol.getQuanShu() + "圈设置成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "增大圈数成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "增大" + productProtocol.getQuanShu() + "圈设置成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "增大圈数成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_REDUCE_TURNS:
                     //减小圈数
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "减小" + productProtocol.getQuanShu() + "圈设置成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "减小圈数成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "减小" + productProtocol.getQuanShu() + "圈设置成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "减小圈数成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_FLOW:
                     //指定流速
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "指定流速" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h设置成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "指定流速成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "指定流速" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h设置成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "指定流速成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_ADD_FLOW:
                     //增大流速
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "增大流速" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h设置成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "增大流速成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "增大流速" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h设置成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "增大流速成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_REDUCE_FLOW:
                     //减小流速
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "减小流速" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h设置成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "减小流速成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "减小流速" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h设置成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "减小流速成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_ZEROING:
                     //流量点、流速回零
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "流量点、流速回零设置成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "回零设置成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "流量点、流速回零设置成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "回零设置成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_DEMARCATE1:
                     //流量点1标定
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "流量点1标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "流量点1标定成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "流量点1标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "流量点1标定成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_DEMARCATE2:
                     //流量点2标定
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "流量点2标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "流量点2标定成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "流量点2标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "流量点2标定成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_DEMARCATE3:
                     //流量点3标定
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "流量点3标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "流量点3标定成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "流量点3标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "流量点3标定成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_DEMARCATE4:
                     //流量点4标定
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "流量点4标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "流量点4标定成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "流量点4标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "流量点4标定成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_DEMARCATE5:
                     //流量点5标定
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "流量点5标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "流量点5标定成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "流量点5标定成功，圈数：" + productProtocol.getQuanShu() + "，流速：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "L/h");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "流量点5标定成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_SLEEP_MONTHS:
                     //设置休眠月份
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "设置休眠月份：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "~" + productProtocol.getQuanShu() + "月成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "设置休眠月份成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "设置休眠月份：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "~" + productProtocol.getQuanShu() + "月成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "设置休眠月份成功");
                     break;
                 case ProductType.CONSTANT_FLOW_VALVE_UPLOAD_INTERVAL:
                     //设置上传间隔
-                    refreshLogList("恒流阀" + productProtocol.getMeterID() + "设置上传间隔：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "小时成功");
-                    showToast("恒流阀" + productProtocol.getMeterID() + "设置上传间隔成功");
+                    refreshLogList("衡流阀" + productProtocol.getMeterID() + "设置上传间隔：" + StringUtils.getPrettyNumber(productProtocol.getFlowRate()) + "小时成功");
+                    showToast("衡流阀" + productProtocol.getMeterID() + "设置上传间隔成功");
                     break;
                 default:
                     String text2;
@@ -352,7 +352,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                     socketPackage.setCmdCode(0);
                     socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                     operateMeterBySocket(socketPackage);
-                    refreshLogList("恒流阀" + meterId + "读取阀门数据指令已发送");
+                    refreshLogList("衡流阀" + meterId + "读取阀门数据指令已发送");
                     break;
                 case 1:
                     //调整流速
@@ -367,7 +367,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                     socketPackage.setCmdCode(30);
                     socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                     operateMeterBySocket(socketPackage);
-                    refreshLogList("恒流阀" + meterId + "回零指令已发送");
+                    refreshLogList("衡流阀" + meterId + "回零指令已发送");
                     break;
                 case 4:
                     //流量点标定
@@ -392,7 +392,7 @@ public class CommunicationServiceActivity extends BaseActivity {
      *
      * @param meterId              设备编号
      * @param socketPackage        Socket包的实体类对象
-     * @param constantFlowValveCmd 恒流阀指令实体类的对象
+     * @param constantFlowValveCmd 衡流阀指令实体类的对象
      */
     private void showChangeFlowDialog(String meterId, SocketPackage socketPackage, ConstantFlowValveCmd constantFlowValveCmd) {
         ChangeConstantFlowValveFlowDialog changeConstantFlowValveFlowDialog = new ChangeConstantFlowValveFlowDialog(mContext);
@@ -412,7 +412,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                     constantFlowValveCmd.setLiuliang(flow);
                     socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                     operateMeterBySocket(socketPackage);
-                    refreshLogList("恒流阀" + meterId + "设定指定流速指令已发送");
+                    refreshLogList("衡流阀" + meterId + "设定指定流速指令已发送");
                     changeConstantFlowValveFlowDialog.dismiss();
                 }
             }
@@ -428,7 +428,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                     constantFlowValveCmd.setLiuliang(flow);
                     socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                     operateMeterBySocket(socketPackage);
-                    refreshLogList("恒流阀" + meterId + "增大流速指令已发送");
+                    refreshLogList("衡流阀" + meterId + "增大流速指令已发送");
                     changeConstantFlowValveFlowDialog.dismiss();
                 }
             }
@@ -444,7 +444,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                     constantFlowValveCmd.setLiuliang(flow);
                     socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                     operateMeterBySocket(socketPackage);
-                    refreshLogList("恒流阀" + meterId + "减小流速指令已发送");
+                    refreshLogList("衡流阀" + meterId + "减小流速指令已发送");
                     changeConstantFlowValveFlowDialog.dismiss();
                 }
             }
@@ -457,7 +457,7 @@ public class CommunicationServiceActivity extends BaseActivity {
      *
      * @param meterId              设备编号
      * @param socketPackage        Socket包的实体类对象
-     * @param constantFlowValveCmd 恒流阀指令实体类的对象
+     * @param constantFlowValveCmd 衡流阀指令实体类的对象
      */
     private void showChangeTurnsDialog(String meterId, SocketPackage socketPackage, ConstantFlowValveCmd constantFlowValveCmd) {
         ChangeConstantFlowValveTurnsDialog changeConstantFlowValveTurnsDialog = new ChangeConstantFlowValveTurnsDialog(mContext);
@@ -477,7 +477,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                     constantFlowValveCmd.setQuanshu(turns);
                     socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                     operateMeterBySocket(socketPackage);
-                    refreshLogList("恒流阀" + meterId + "设定指定圈数指令已发送");
+                    refreshLogList("衡流阀" + meterId + "设定指定圈数指令已发送");
                     changeConstantFlowValveTurnsDialog.dismiss();
                 }
             }
@@ -493,7 +493,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                     constantFlowValveCmd.setQuanshu(turns);
                     socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                     operateMeterBySocket(socketPackage);
-                    refreshLogList("恒流阀" + meterId + "增大圈数指令已发送");
+                    refreshLogList("衡流阀" + meterId + "增大圈数指令已发送");
                     changeConstantFlowValveTurnsDialog.dismiss();
                 }
             }
@@ -509,7 +509,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                     constantFlowValveCmd.setQuanshu(turns);
                     socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                     operateMeterBySocket(socketPackage);
-                    refreshLogList("恒流阀" + meterId + "减小圈数指令已发送");
+                    refreshLogList("衡流阀" + meterId + "减小圈数指令已发送");
                     changeConstantFlowValveTurnsDialog.dismiss();
                 }
             }
@@ -522,7 +522,7 @@ public class CommunicationServiceActivity extends BaseActivity {
      *
      * @param meterId              设备编号
      * @param socketPackage        Socket包的实体类对象
-     * @param constantFlowValveCmd 恒流阀指令实体类的对象
+     * @param constantFlowValveCmd 衡流阀指令实体类的对象
      */
     private void showDemarcateDialog(String meterId, SocketPackage socketPackage, ConstantFlowValveCmd constantFlowValveCmd) {
         DemarcateConstantFlowValveDialog demarcateConstantFlowValveDialog = new DemarcateConstantFlowValveDialog(mContext);
@@ -556,7 +556,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                 constantFlowValveCmd.setLiuliang(flow);
                 socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                 operateMeterBySocket(socketPackage);
-                refreshLogList("恒流阀" + meterId + "标定流量点1指令已发送");
+                refreshLogList("衡流阀" + meterId + "标定流量点1指令已发送");
                 demarcateConstantFlowValveDialog.dismiss();
             }
 
@@ -578,7 +578,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                 constantFlowValveCmd.setLiuliang(flow);
                 socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                 operateMeterBySocket(socketPackage);
-                refreshLogList("恒流阀" + meterId + "标定流量点2指令已发送");
+                refreshLogList("衡流阀" + meterId + "标定流量点2指令已发送");
                 demarcateConstantFlowValveDialog.dismiss();
             }
 
@@ -600,7 +600,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                 constantFlowValveCmd.setLiuliang(flow);
                 socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                 operateMeterBySocket(socketPackage);
-                refreshLogList("恒流阀" + meterId + "标定流量点3指令已发送");
+                refreshLogList("衡流阀" + meterId + "标定流量点3指令已发送");
                 demarcateConstantFlowValveDialog.dismiss();
             }
 
@@ -622,7 +622,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                 constantFlowValveCmd.setLiuliang(flow);
                 socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                 operateMeterBySocket(socketPackage);
-                refreshLogList("恒流阀" + meterId + "标定流量点4指令已发送");
+                refreshLogList("衡流阀" + meterId + "标定流量点4指令已发送");
                 demarcateConstantFlowValveDialog.dismiss();
             }
 
@@ -644,7 +644,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                 constantFlowValveCmd.setLiuliang(flow);
                 socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                 operateMeterBySocket(socketPackage);
-                refreshLogList("恒流阀" + meterId + "标定流量点5指令已发送");
+                refreshLogList("衡流阀" + meterId + "标定流量点5指令已发送");
                 demarcateConstantFlowValveDialog.dismiss();
             }
         });
@@ -656,7 +656,7 @@ public class CommunicationServiceActivity extends BaseActivity {
      *
      * @param meterId              设备编号
      * @param socketPackage        Socket包的实体类对象
-     * @param constantFlowValveCmd 恒流阀指令实体类的对象
+     * @param constantFlowValveCmd 衡流阀指令实体类的对象
      */
     private void showChangeSleepMonthDialog(String meterId, SocketPackage socketPackage, ConstantFlowValveCmd constantFlowValveCmd) {
         ChangeConstantFlowValveSleepMonthDialog changeConstantFlowValveSleepMonthDialog = new ChangeConstantFlowValveSleepMonthDialog(mContext);
@@ -682,7 +682,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                 constantFlowValveCmd.setQuanshu(stopMonth);
                 socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                 operateMeterBySocket(socketPackage);
-                refreshLogList("恒流阀" + meterId + "设置休眠月份指令已发送");
+                refreshLogList("衡流阀" + meterId + "设置休眠月份指令已发送");
                 changeConstantFlowValveSleepMonthDialog.dismiss();
             }
         });
@@ -694,7 +694,7 @@ public class CommunicationServiceActivity extends BaseActivity {
      *
      * @param meterId              设备编号
      * @param socketPackage        Socket包的实体类对象
-     * @param constantFlowValveCmd 恒流阀指令实体类的对象
+     * @param constantFlowValveCmd 衡流阀指令实体类的对象
      */
     private void showChangeUploadIntervalDialog(String meterId, SocketPackage socketPackage, ConstantFlowValveCmd constantFlowValveCmd) {
         ChangeConstantFlowValveUploadIntervalDialog changeConstantFlowValveUploadIntervalDialog = new ChangeConstantFlowValveUploadIntervalDialog(mContext);
@@ -713,7 +713,7 @@ public class CommunicationServiceActivity extends BaseActivity {
                 constantFlowValveCmd.setLiuliang(interval);
                 socketPackage.setCmdContent(GsonUtils.convertJSON(constantFlowValveCmd));
                 operateMeterBySocket(socketPackage);
-                refreshLogList("恒流阀" + meterId + "设置上传间隔指令已发送");
+                refreshLogList("衡流阀" + meterId + "设置上传间隔指令已发送");
                 changeConstantFlowValveUploadIntervalDialog.dismiss();
             }
         });
